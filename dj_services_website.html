@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DJ Services — Corporate Events & Weddings</title>
+<meta name="description" content="Premium DJ services for weddings and corporate events. Professional, elegant, and tailored to your occasion." />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #F5F0E8;
+    --warm-beige: #E8DFD0;
+    --tan: #C9B99A;
+    --brown: #7D6248;
+    --dark-brown: #3E2F23;
+    --text: #2C2218;
+    --text-muted: #7A6652;
+    --white: #FDFAF6;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Georgia', serif; background: var(--white); color: var(--text); line-height: 1.7; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(253,250,246,0.95);
+    border-bottom: 1px solid var(--warm-beige);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 3rem;
+  }
+  .nav-logo { font-size: 1.2rem; font-weight: bold; letter-spacing: 0.12em; color: var(--dark-brown); text-transform: uppercase; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; font-family: 'Arial', sans-serif; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); transition: color 0.2s; }
+  .nav-links a:hover { color: var(--dark-brown); }
+
+  /* HERO VIDEO */
+  .hero {
+    position: relative; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; overflow: hidden;
+  }
+  .hero-video {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; z-index: 0;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: rgba(30, 18, 10, 0.62);
+    z-index: 1;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 720px; padding: 6rem 2rem 4rem;
+  }
+  .hero-eyebrow {
+    font-family: 'Arial', sans-serif; font-size: 0.78rem;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--tan); margin-bottom: 1.2rem;
+  }
+  .hero-tagline {
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: normal; color: #FDFAF6;
+    line-height: 1.1; margin-bottom: 1rem;
+    font-style: italic;
+  }
+  .hero-sub {
+    font-family: 'Arial', sans-serif; font-size: 0.95rem;
+    color: rgba(232,223,208,0.85); margin-bottom: 2.5rem;
+    line-height: 1.9; max-width: 480px; margin-left: auto; margin-right: auto;
+  }
+  .btn-primary {
+    display: inline-block; padding: 0.85rem 2.5rem;
+    background: var(--dark-brown); color: var(--cream);
+    text-decoration: none; font-family: 'Arial', sans-serif;
+    font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+    border: none; cursor: pointer; transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--brown); }
+  .btn-outline {
+    display: inline-block; padding: 0.85rem 2.5rem;
+    background: transparent; color: #FDFAF6;
+    text-decoration: none; font-family: 'Arial', sans-serif;
+    font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+    border: 1.5px solid rgba(253,250,246,0.6); cursor: pointer; transition: all 0.2s;
+    margin-left: 1rem;
+  }
+  .btn-outline:hover { background: rgba(253,250,246,0.12); }
+  .hero-ornament { margin: 2.5rem auto 0; width: 60px; height: 1px; background: var(--tan); }
+
+  /* SECTIONS */
+  section { padding: 6rem 2rem; }
+  .section-inner { max-width: 1000px; margin: 0 auto; }
+  .section-label { font-family: 'Arial', sans-serif; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tan); margin-bottom: 0.75rem; }
+  .section-title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--dark-brown); font-weight: normal; margin-bottom: 1.5rem; }
+  .section-title em { font-style: italic; color: var(--brown); }
+  .divider { width: 40px; height: 1px; background: var(--tan); margin: 1.5rem 0; }
+
+  /* ABOUT */
+  .about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-image { aspect-ratio: 4/5; overflow: hidden; background: var(--warm-beige); }
+  .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about-text p { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.2rem; }
+  .stats { display: flex; gap: 2.5rem; margin-top: 2rem; }
+  .stat-num { font-size: 2rem; color: var(--dark-brown); font-weight: normal; }
+  .stat-label { font-family: 'Arial', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+
+  /* SERVICES */
+  .services { background: var(--cream); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .service-card { background: var(--white); padding: 2.5rem 2rem; border-top: 2px solid var(--tan); }
+  .service-icon { font-size: 1.5rem; margin-bottom: 1.2rem; color: var(--brown); }
+  .service-card h3 { font-size: 1.15rem; color: var(--dark-brown); font-weight: normal; margin-bottom: 0.75rem; }
+  .service-card p { font-family: 'Arial', sans-serif; font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
+
+  /* TESTIMONIALS */
+  .testimonials { background: var(--dark-brown); }
+  .testimonials .section-label { color: var(--tan); }
+  .testimonials .section-title { color: var(--cream); }
+  .testimonials .divider { background: var(--tan); }
+  .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .testimonial-card { border-left: 2px solid var(--tan); padding: 1.5rem 2rem; }
+  .testimonial-card blockquote { font-size: 1rem; color: var(--warm-beige); line-height: 1.8; margin-bottom: 1rem; font-style: italic; }
+  .testimonial-author { font-family: 'Arial', sans-serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tan); }
+
+  /* CONTACT */
+  .contact { background: var(--warm-beige); }
+  .contact-inner { max-width: 620px; margin: 0 auto; text-align: center; }
+  .contact-inner p { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2.5rem; }
+  .contact-form { text-align: left; display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%; padding: 0.85rem 1rem;
+    font-family: 'Arial', sans-serif; font-size: 0.9rem;
+    background: var(--white); color: var(--text);
+    border: 1px solid var(--tan); outline: none;
+    transition: border-color 0.2s; appearance: none;
+  }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--brown); }
+  .contact-form textarea { resize: vertical; min-height: 120px; }
+  .contact-form .btn-primary { width: 100%; text-align: center; font-size: 0.82rem; }
+
+  /* FOOTER */
+  footer { background: var(--dark-brown); color: var(--tan); text-align: center; padding: 2.5rem; font-family: 'Arial', sans-serif; font-size: 0.8rem; letter-spacing: 0.05em; }
+  footer span { color: var(--warm-beige); }
+
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.2rem; }
+    .about-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .stats { gap: 1.5rem; }
+    .btn-outline { margin-left: 0; margin-top: 0.75rem; display: block; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">DJ Placeholder</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO WITH VIDEO -->
+<section class="hero" id="home">
+  <!--
+    REPLACE VIDEO: Swap the src below with a link to your own DJ video.
+    Recommended: upload your video to Cloudinary or Vimeo and paste the direct .mp4 URL.
+    The poster image shows while the video loads — replace with a photo of your own.
+  -->
+  <video class="hero-video" autoplay muted loop playsinline
+    poster="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80">
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Corporate Events &amp; Weddings</p>
+    <h1 class="hero-tagline">Bring your event to life</h1>
+    <p class="hero-sub">Premium DJ services crafted for the moments that matter most. From elegant weddings to polished corporate events — every detail, every beat, in tune with your vision.</p>
+    <a href="#contact" class="btn-primary">Book a Consultation</a>
+    <a href="#services" class="btn-outline">Our Services</a>
+    <div class="hero-ornament"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-image">
+        <!--
+          REPLACE PHOTO: Change the src below to a photo of yourself.
+          Upload your image to a free host like https://imgbb.com and paste the URL here.
+        -->
+        <img src="https://images.unsplash.com/photo-1571266028027-0f5b34ac0ee5?w=800&q=80" alt="DJ performing at an event" />
+      </div>
+      <div class="about-text">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Music that <em>moves</em> people</h2>
+        <div class="divider"></div>
+        <p>With years of experience behind the decks, we bring a refined, professional approach to every event. Whether you're planning an intimate wedding reception or a large-scale corporate gala, we tailor every set to match your atmosphere perfectly.</p>
+        <p>We believe great music is more than just sound — it's the invisible thread that ties an evening together, elevates the energy in the room, and creates memories that last long after the night is over.</p>
+        <div class="stats">
+          <div>
+            <div class="stat-num">100+</div>
+            <div class="stat-label">Gigs Played</div>
+          </div>
+          <div>
+            <div class="stat-num">Varied</div>
+            <div class="stat-label">Event Types</div>
+          </div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Dedicated</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Services tailored <em>for you</em></h2>
+    <div class="divider"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">♦</div>
+        <h3>Wedding Receptions</h3>
+        <p>From the first dance to the last song, we curate a seamless musical journey that reflects your love story and keeps guests on the dance floor all night.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">♦</div>
+        <h3>Corporate Events</h3>
+        <p>Polished, professional, and perfectly pitched. We set the right tone for product launches, galas, award nights, and company celebrations of any scale.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">♦</div>
+        <h3>Ceremony &amp; Cocktail Hour</h3>
+        <p>Subtle, elegant background music for ceremonies and cocktail hours — setting a warm, welcoming atmosphere before the evening begins.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">♦</div>
+        <h3>Private Events</h3>
+        <p>From intimate private gatherings to exclusive celebrations, we bring the same professionalism and energy to every occasion — big or small.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <p class="section-label">Kind Words</p>
+    <h2 class="section-title">What clients <em>say</em></h2>
+    <div class="divider"></div>
+    <div class="testimonial-grid">
+      <!--
+        REPLACE TESTIMONIALS: Swap the blockquote text and author details
+        with real quotes from your clients when you have them.
+      -->
+      <div class="testimonial-card">
+        <blockquote>"Add your first testimonial here — share what a client said about your performance or professionalism."</blockquote>
+        <div class="testimonial-author">Client Name — Event Type, Year</div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>"A second testimonial can go here. Even a short, genuine quote goes a long way in building trust with new clients."</blockquote>
+        <div class="testimonial-author">Client Name — Event Type, Year</div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>"A third quote here. Once you've collected feedback, simply swap these placeholders out for the real thing."</blockquote>
+        <div class="testimonial-author">Client Name — Event Type, Year</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-title">Let's plan <em>your</em> event</h2>
+    <div class="divider" style="margin: 1rem auto 1.5rem;"></div>
+    <p>Tell us about your event and we'll be in touch within 24 hours to discuss how we can make it unforgettable.</p>
+    <div class="contact-form">
+      <div class="form-row">
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Email Address" />
+      </div>
+      <div class="form-row">
+        <input type="tel" placeholder="Phone Number" />
+        <select>
+          <option value="" disabled selected>Event Type</option>
+          <option>Wedding</option>
+          <option>Corporate Event</option>
+          <option>Private Event</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <input type="text" placeholder="Event Date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
+      <textarea placeholder="Tell us about your event..."></textarea>
+      <!--
+        CONTACT FORM: To make this form actually send emails,
+        sign up free at https://formspree.io, create a form,
+        and replace the button below with their form action tag.
+      -->
+      <button class="btn-primary" type="button">Send Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 <span>DJ Placeholder</span> — All rights reserved.</p>
+</footer>
+
+</body>
+</html>
