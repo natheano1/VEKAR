@@ -39,11 +39,18 @@
     display: flex; align-items: center; justify-content: center;
     text-align: center; overflow: hidden;
   }
+  .video-container {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; z-index: 0;
+  }
   .hero-video {
     position: absolute; top: 0; left: 0;
     width: 100%; height: 100%;
-    object-fit: cover; z-index: 0;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
   }
+  .hero-video.active { opacity: 1; }
   .hero-overlay {
     position: absolute; inset: 0;
     background: rgba(30, 18, 10, 0.62);
@@ -168,17 +175,17 @@
   </ul>
 </nav>
 
-<!-- HERO WITH VIDEO -->
+<!-- HERO WITH ROTATING VIDEOS -->
 <section class="hero" id="home">
-  <!--
-    REPLACE VIDEO: Swap the src below with a link to your own DJ video.
-    Recommended: upload your video to Cloudinary or Vimeo and paste the direct .mp4 URL.
-    The poster image shows while the video loads — replace with a photo of your own.
-  -->
-  <video class="hero-video" autoplay muted loop playsinline
-    poster="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80">
-    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
-  </video>
+  <div class="video-container">
+    <!--
+      VIDEO: Make sure 12548280-hd_1920_1080_30fps.mp4 sits in the
+      SAME folder as index.html on GitHub. Swap src for your own video later.
+    -->
+    <video class="hero-video active" autoplay muted loop playsinline preload="auto">
+      <source src="12548280-hd_1920_1080_30fps.mp4" type="video/mp4" />
+    </video>
+  </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <p class="hero-eyebrow">Corporate Events &amp; Weddings</p>
@@ -195,11 +202,7 @@
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-image">
-        <!--
-          REPLACE PHOTO: Change the src below to a photo of yourself.
-          Upload your image to a free host like https://imgbb.com and paste the URL here.
-        -->
-        <img src="https://images.unsplash.com/photo-1571266028027-0f5b34ac0ee5?w=800&q=80" alt="DJ performing at an event" />
+        <img src="about-photo.jpg" alt="DJ controller setup" />
       </div>
       <div class="about-text">
         <p class="section-label">About</p>
@@ -322,6 +325,8 @@
 <footer>
   <p>&copy; 2026 <span>DJ Placeholder</span> — All rights reserved.</p>
 </footer>
+
+
 
 </body>
 </html>
