@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>DJ Services — Corporate Events & Weddings</title>
+<title>VEKAR — DJ Services for Corporate Events & Weddings</title>
 <meta name="description" content="Premium DJ services for weddings and corporate events. Professional, elegant, and tailored to your occasion." />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,7 +26,7 @@
     background: rgba(253,250,246,0.95);
     border-bottom: 1px solid var(--warm-beige);
     display: flex; align-items: center; justify-content: space-between;
-    padding: 1rem 3rem;
+    padding: 1rem 3rem; opacity: 0;
   }
   .nav-logo { font-size: 1.2rem; font-weight: bold; letter-spacing: 0.12em; color: var(--dark-brown); text-transform: uppercase; }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -34,66 +34,20 @@
   .nav-links a:hover { color: var(--dark-brown); }
 
   /* HERO VIDEO */
-  .hero {
-    position: relative; min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
-    text-align: center; overflow: hidden;
-  }
-  .video-container {
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%; z-index: 0;
-  }
-  .hero-video {
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
-  }
-  .hero-video.active { opacity: 1; }
-  .hero-overlay {
-    position: absolute; inset: 0;
-    background: rgba(30, 18, 10, 0.62);
-    z-index: 1;
-  }
-  .hero-inner {
-    position: relative; z-index: 2;
-    max-width: 720px; padding: 6rem 2rem 4rem;
-  }
-  .hero-eyebrow {
-    font-family: 'Arial', sans-serif; font-size: 0.78rem;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--tan); margin-bottom: 1.2rem;
-  }
-  .hero-tagline {
-    font-size: clamp(2.6rem, 6vw, 5rem);
-    font-weight: normal; color: #FDFAF6;
-    line-height: 1.1; margin-bottom: 1rem;
-    font-style: italic;
-  }
-  .hero-sub {
-    font-family: 'Arial', sans-serif; font-size: 0.95rem;
-    color: rgba(232,223,208,0.85); margin-bottom: 2.5rem;
-    line-height: 1.9; max-width: 480px; margin-left: auto; margin-right: auto;
-  }
-  .btn-primary {
-    display: inline-block; padding: 0.85rem 2.5rem;
-    background: var(--dark-brown); color: var(--cream);
-    text-decoration: none; font-family: 'Arial', sans-serif;
-    font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
-    border: none; cursor: pointer; transition: background 0.2s;
-  }
+  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+  .video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+  .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero-overlay { position: absolute; inset: 0; background: rgba(30, 18, 10, 0.62); z-index: 1; }
+  .hero-inner { position: relative; z-index: 2; max-width: 720px; padding: 6rem 2rem 4rem; }
+  .hero-eyebrow { font-family: 'Arial', sans-serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tan); margin-bottom: 1.2rem; opacity: 0; }
+  .hero-tagline { font-size: clamp(2.6rem, 6vw, 5rem); font-weight: normal; color: #FDFAF6; line-height: 1.1; margin-bottom: 1rem; font-style: italic; opacity: 0; }
+  .hero-sub { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: rgba(232,223,208,0.85); margin-bottom: 2.5rem; line-height: 1.9; max-width: 480px; margin-left: auto; margin-right: auto; opacity: 0; }
+  .hero-buttons { opacity: 0; }
+  .btn-primary { display: inline-block; padding: 0.85rem 2.5rem; background: var(--dark-brown); color: var(--cream); text-decoration: none; font-family: 'Arial', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.2s; }
   .btn-primary:hover { background: var(--brown); }
-  .btn-outline {
-    display: inline-block; padding: 0.85rem 2.5rem;
-    background: transparent; color: #FDFAF6;
-    text-decoration: none; font-family: 'Arial', sans-serif;
-    font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
-    border: 1.5px solid rgba(253,250,246,0.6); cursor: pointer; transition: all 0.2s;
-    margin-left: 1rem;
-  }
+  .btn-outline { display: inline-block; padding: 0.85rem 2.5rem; background: transparent; color: #FDFAF6; text-decoration: none; font-family: 'Arial', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; border: 1.5px solid rgba(253,250,246,0.6); cursor: pointer; transition: all 0.2s; margin-left: 1rem; }
   .btn-outline:hover { background: rgba(253,250,246,0.12); }
-  .hero-ornament { margin: 2.5rem auto 0; width: 60px; height: 1px; background: var(--tan); }
+  .hero-ornament { margin: 2.5rem auto 0; width: 60px; height: 1px; background: var(--tan); opacity: 0; }
 
   /* SECTIONS */
   section { padding: 6rem 2rem; }
@@ -106,8 +60,9 @@
   /* ABOUT */
   .about { background: var(--white); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .about-image { aspect-ratio: 4/5; overflow: hidden; background: var(--warm-beige); }
+  .about-image { aspect-ratio: 4/5; overflow: hidden; background: var(--warm-beige); opacity: 0; }
   .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about-text { opacity: 0; }
   .about-text p { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.2rem; }
   .stats { display: flex; gap: 2.5rem; margin-top: 2rem; }
   .stat-num { font-size: 2rem; color: var(--dark-brown); font-weight: normal; }
@@ -116,7 +71,7 @@
   /* SERVICES */
   .services { background: var(--cream); }
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3rem; }
-  .service-card { background: var(--white); padding: 2.5rem 2rem; border-top: 2px solid var(--tan); }
+  .service-card { background: var(--white); padding: 2.5rem 2rem; border-top: 2px solid var(--tan); opacity: 0; transform: translateY(30px); }
   .service-icon { font-size: 1.5rem; margin-bottom: 1.2rem; color: var(--brown); }
   .service-card h3 { font-size: 1.15rem; color: var(--dark-brown); font-weight: normal; margin-bottom: 0.75rem; }
   .service-card p { font-family: 'Arial', sans-serif; font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
@@ -137,13 +92,7 @@
   .contact-inner p { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2.5rem; }
   .contact-form { text-align: left; display: flex; flex-direction: column; gap: 1rem; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .contact-form input, .contact-form select, .contact-form textarea {
-    width: 100%; padding: 0.85rem 1rem;
-    font-family: 'Arial', sans-serif; font-size: 0.9rem;
-    background: var(--white); color: var(--text);
-    border: 1px solid var(--tan); outline: none;
-    transition: border-color 0.2s; appearance: none;
-  }
+  .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 0.85rem 1rem; font-family: 'Arial', sans-serif; font-size: 0.9rem; background: var(--white); color: var(--text); border: 1px solid var(--tan); outline: none; transition: border-color 0.2s; appearance: none; }
   .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--brown); }
   .contact-form textarea { resize: vertical; min-height: 120px; }
   .contact-form .btn-primary { width: 100%; text-align: center; font-size: 0.82rem; }
@@ -165,8 +114,8 @@
 <body>
 
 <!-- NAV -->
-<nav>
-  <div class="nav-logo">DJ Placeholder</div>
+<nav id="main-nav">
+  <div class="nav-logo">VEKAR</div>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -175,25 +124,23 @@
   </ul>
 </nav>
 
-<!-- HERO WITH ROTATING VIDEOS -->
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="video-container">
-    <!--
-      VIDEO: Make sure 12548280-hd_1920_1080_30fps.mp4 sits in the
-      SAME folder as index.html on GitHub. Swap src for your own video later.
-    -->
-    <video class="hero-video active" autoplay muted loop playsinline preload="auto">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
       <source src="./12548280-hd_1920_1080_30fps.mp4" type="video/mp4" />
     </video>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <p class="hero-eyebrow">Corporate Events &amp; Weddings</p>
-    <h1 class="hero-tagline">Bring your event to life</h1>
-    <p class="hero-sub">Premium DJ services crafted for the moments that matter most. From elegant weddings to polished corporate events — every detail, every beat, in tune with your vision.</p>
-    <a href="#contact" class="btn-primary">Book a Consultation</a>
-    <a href="#services" class="btn-outline">Our Services</a>
-    <div class="hero-ornament"></div>
+    <p class="hero-eyebrow" id="hero-eyebrow">Corporate Events &amp; Weddings</p>
+    <h1 class="hero-tagline" id="hero-tagline">Bring your event to life</h1>
+    <p class="hero-sub" id="hero-sub">Premium DJ services crafted for the moments that matter most. From elegant weddings to polished corporate events — every detail, every beat, in tune with your vision.</p>
+    <div class="hero-buttons" id="hero-buttons">
+      <a href="#contact" class="btn-primary">Book a Consultation</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+    <div class="hero-ornament" id="hero-ornament"></div>
   </div>
 </section>
 
@@ -201,10 +148,10 @@
 <section class="about" id="about">
   <div class="section-inner">
     <div class="about-grid">
-      <div class="about-image">
+      <div class="about-image" id="about-image">
         <img src="./about-photo.jpg" alt="DJ controller setup" />
       </div>
-      <div class="about-text">
+      <div class="about-text" id="about-text">
         <p class="section-label">About</p>
         <h2 class="section-title">Music that <em>moves</em> people</h2>
         <div class="divider"></div>
@@ -212,15 +159,15 @@
         <p>We believe great music is more than just sound — it's the invisible thread that ties an evening together, elevates the energy in the room, and creates memories that last long after the night is over.</p>
         <div class="stats">
           <div>
-            <div class="stat-num">100+</div>
+            <div class="stat-num" id="stat-gigs">0</div>
             <div class="stat-label">Gigs Played</div>
           </div>
           <div>
-            <div class="stat-num">Varied</div>
+            <div class="stat-num" id="stat-varied">–</div>
             <div class="stat-label">Event Types</div>
           </div>
           <div>
-            <div class="stat-num">100%</div>
+            <div class="stat-num" id="stat-dedicated">0</div>
             <div class="stat-label">Dedicated</div>
           </div>
         </div>
@@ -267,10 +214,6 @@
     <h2 class="section-title">What clients <em>say</em></h2>
     <div class="divider"></div>
     <div class="testimonial-grid">
-      <!--
-        REPLACE TESTIMONIALS: Swap the blockquote text and author details
-        with real quotes from your clients when you have them.
-      -->
       <div class="testimonial-card">
         <blockquote>"Add your first testimonial here — share what a client said about your performance or professionalism."</blockquote>
         <div class="testimonial-author">Client Name — Event Type, Year</div>
@@ -311,11 +254,6 @@
       </div>
       <input type="text" placeholder="Event Date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
       <textarea placeholder="Tell us about your event..."></textarea>
-      <!--
-        CONTACT FORM: To make this form actually send emails,
-        sign up free at https://formspree.io, create a form,
-        and replace the button below with their form action tag.
-      -->
       <button class="btn-primary" type="button">Send Enquiry</button>
     </div>
   </div>
@@ -323,10 +261,81 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>&copy; 2026 <span>DJ Placeholder</span> — All rights reserved.</p>
+  <p>&copy; 2026 <span>VEKAR</span> — All rights reserved.</p>
 </footer>
 
+<!-- Anime.js via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+  // ── 1. NAV slides down on load
+  anime({
+    targets: '#main-nav',
+    opacity: [0, 1],
+    translateY: [-20, 0],
+    duration: 800,
+    easing: 'easeOutExpo',
+    delay: 200
+  });
 
+  // ── 2. HERO elements stagger in on load
+  anime.timeline({ easing: 'easeOutExpo' })
+    .add({ targets: '#hero-eyebrow', opacity: [0, 1], translateY: [20, 0], duration: 700 }, 400)
+    .add({ targets: '#hero-tagline', opacity: [0, 1], translateY: [30, 0], duration: 800 }, 650)
+    .add({ targets: '#hero-sub',     opacity: [0, 1], translateY: [20, 0], duration: 700 }, 950)
+    .add({ targets: '#hero-buttons', opacity: [0, 1], translateY: [20, 0], duration: 700 }, 1150)
+    .add({ targets: '#hero-ornament',opacity: [0, 1], scaleX: [0, 1],     duration: 600, transformOrigin: 'left center' }, 1350);
+
+  // ── Helper: fire callback once when element scrolls into view
+  function onVisible(selector, callback) {
+    const el = document.querySelector(selector);
+    if (!el) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { callback(); obs.disconnect(); }
+      });
+    }, { threshold: 0.2 });
+    obs.observe(el);
+  }
+
+  // ── 3. ABOUT photo slides in from left, text from right
+  onVisible('#about-image', () => {
+    anime({ targets: '#about-image', opacity: [0, 1], translateX: [-50, 0], duration: 1000, easing: 'easeOutExpo' });
+    anime({ targets: '#about-text',  opacity: [0, 1], translateX: [50, 0],  duration: 1000, easing: 'easeOutExpo' });
+  });
+
+  // ── 4. STATS count up when about section is visible
+  onVisible('.stats', () => {
+    // Gigs: counts to 100 then appends +
+    let gigsObj = { val: 0 };
+    anime({
+      targets: gigsObj, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
+      update: () => { document.getElementById('stat-gigs').innerHTML = Math.round(gigsObj.val) + '+'; }
+    });
+    // Dedicated: counts to 100 then appends %
+    let dedObj = { val: 0 };
+    anime({
+      targets: dedObj, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
+      update: () => { document.getElementById('stat-dedicated').innerHTML = Math.round(dedObj.val) + '%'; }
+    });
+    // Varied — fade in the word
+    anime({
+      targets: '#stat-varied', opacity: [0, 1], duration: 1000, easing: 'easeOutExpo',
+      begin: () => { document.getElementById('stat-varied').innerHTML = 'Varied'; }
+    });
+  });
+
+  // ── 5. SERVICE CARDS stagger up on scroll
+  onVisible('.services-grid', () => {
+    anime({
+      targets: '.service-card',
+      opacity: [0, 1],
+      translateY: [30, 0],
+      delay: anime.stagger(130),
+      duration: 750,
+      easing: 'easeOutExpo'
+    });
+  });
+</script>
 
 </body>
 </html>
