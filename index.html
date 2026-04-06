@@ -3,31 +3,110 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact — Gold Coast DJ Hire</title>
-<meta name="description" content="Book Gold Coast DJ Hire for your wedding, corporate event or private party. Get in touch for a free consultation." />
-<link rel="canonical" href="https://www.goldcoastdjhire.com.au/contact.html" />
-<link rel="stylesheet" href="../style.css" />
+<title>Gold Coast DJ Hire — Corporate, Weddings & Private Events</title>
+<meta name="description" content="Gold Coast DJ Hire — premium DJ services for weddings, corporate events and private parties on the Gold Coast." />
+<meta name="keywords" content="DJ hire Gold Coast, Gold Coast DJ, wedding DJ Gold Coast, corporate DJ Gold Coast, DJ services Gold Coast" />
+<link rel="canonical" href="https://www.goldcoastdjhire.com.au" />
+<meta property="og:title" content="Gold Coast DJ Hire — Corporate, Weddings & Private Events" />
+<meta property="og:description" content="Premium DJ services for weddings, corporate events and private parties on the Gold Coast." />
+<meta property="og:url" content="https://www.goldcoastdjhire.com.au" />
+<meta property="og:type" content="website" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Gold Coast DJ Hire",
+  "url": "https://www.goldcoastdjhire.com.au",
+  "email": "hello@goldcoastdjhire.com.au",
+  "description": "Premium DJ services for weddings, corporate events and private parties on the Gold Coast.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "QLD",
+    "addressCountry": "AU",
+    "addressLocality": "Gold Coast"
+  },
+  "areaServed": ["Gold Coast", "Queensland"],
+  "serviceType": ["Wedding DJ", "Corporate DJ", "Private Event DJ", "Cocktail Hour DJ"]
+}
+</script>
+<link rel="stylesheet" href="./style.css" />
 <style>
-  .page-hero { padding: 10rem 2rem 5rem; background: var(--dark); text-align: center; border-bottom: 1px solid var(--border); }
-  .page-hero h1 { font-family: 'Georgia', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: normal; font-style: italic; }
-  .contact-section { background: var(--black); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
-  .contact-info h2 { font-family: 'Georgia', serif; font-size: 1.5rem; font-weight: normal; margin-bottom: 1rem; }
-  .contact-info p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 2rem; }
-  .contact-detail { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; font-size: 0.9rem; color: var(--text-muted); }
-  .contact-detail a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-  .contact-detail a:hover { color: #FF2D8B; }
-  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  /* HERO */
+  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+  .video-container { position: absolute; inset: 0; z-index: 0; }
+  .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.5) 50%, rgba(13,13,13,0.85) 100%); z-index: 1; }
+  .hero-inner { position: relative; z-index: 2; max-width: 800px; padding: 5rem 2rem 4rem; margin-top: -4rem; }
+  .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1.2rem; opacity: 0; }
+  .hero-tagline { font-family: 'Georgia', serif; font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: normal; color: #fff; line-height: 1.1; margin-bottom: 0.5rem; font-style: italic; opacity: 0; }
+  .hero-tagline-sub { font-family: 'Georgia', serif; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: normal; font-style: italic; opacity: 0; margin-bottom: 1.5rem; }
+  .hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; line-height: 1.9; max-width: 500px; margin-left: auto; margin-right: auto; opacity: 0; }
+  .hero-buttons { opacity: 0; }
+  .hero-ornament { margin: 2.5rem auto 0; width: 60px; height: 2px; background: linear-gradient(90deg, #FF2D8B, #2060FF); opacity: 0; }
+
+  /* ABOUT */
+  .about { background: var(--dark); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-image { aspect-ratio: 4/5; overflow: hidden; background: var(--card); opacity: 0; border: 1px solid var(--border); }
+  .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about-text { opacity: 0; }
+  .about-text p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.2rem; }
+  .stats { display: flex; gap: 2.5rem; margin-top: 2rem; }
+  .stat-num { font-family: 'Georgia', serif; font-size: 2.2rem; font-weight: normal; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .stat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.2rem; }
+  .about-title { font-family: 'Georgia', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: normal; line-height: 1.2; margin-bottom: 1.5rem; }
+
+  /* SERVICES PREVIEW */
+  .services { background: var(--black); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .service-card { background: var(--card); border: 1px solid var(--border); opacity: 0; transform: translateY(30px); text-decoration: none; color: inherit; display: block; transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient); z-index: 1; }
+  .service-card:hover { border-color: rgba(255,45,139,0.4); transform: translateY(-4px); }
+  .service-card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+  .service-card-body { padding: 1.75rem 2rem 2rem; }
+  .service-icon { font-size: 1.5rem; margin-bottom: 1.2rem; }
+  .service-card h3 { font-family: 'Georgia', serif; font-size: 1.15rem; color: #fff; font-weight: normal; margin-bottom: 0.75rem; }
+  .service-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
+  .service-card .card-arrow { margin-top: 1.5rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+  /* TESTIMONIALS */
+  .testimonials { background: var(--dark); }
+  .testimonial-carousel { max-width: 780px; margin: 3rem auto 0; }
+  .testimonial-slide { display: none; text-align: center; animation: fadeIn 0.5s ease; }
+  .testimonial-slide.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .testimonial-slide blockquote { font-family: 'Georgia', serif; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.85); line-height: 1.8; font-style: italic; margin-bottom: 1.5rem; }
+  .testimonial-slide .author { font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+  .testimonial-slide .author span { color: rgba(255,255,255,0.85); }
+  .testimonial-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+  .testimonial-dots { display: flex; justify-content: center; gap: 0.5rem; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; transition: background 0.3s; padding: 0; }
+  .dot.active { background: #FF2D8B; }
+  .testimonial-arrow { width: 40px; height: 40px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: all 0.2s; flex-shrink: 0; }
+  .testimonial-arrow:hover { border-color: #FF2D8B; color: #FF2D8B; }
+
+  /* CONTACT PREVIEW */
+  .contact { background: var(--black); }
+  .contact-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+  .contact-inner > p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2.5rem; }
+  .contact-form { text-align: left; display: flex; flex-direction: column; gap: 1rem; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 0.9rem 1rem; font-size: 0.9rem; background: var(--card); color: var(--text); border: 1px solid var(--border); outline: none; transition: border-color 0.2s; appearance: none; font-family: 'Arial', sans-serif; }
   .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-muted); }
   .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: #FF2D8B; }
   .contact-form select option { background: var(--card); }
-  .contact-form textarea { resize: vertical; min-height: 140px; }
-  @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } .form-row { grid-template-columns: 1fr; } }
+  .contact-form textarea { resize: vertical; min-height: 120px; }
+  .contact-form .btn-primary { width: 100%; text-align: center; font-size: 0.82rem; }
+
+  @media (max-width: 700px) {
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .stats { gap: 1.5rem; flex-wrap: wrap; }
+  }
 </style>
 </head>
 <body>
+
 <!-- MOBILE MENU OVERLAY -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="/" onclick="closeMobile()">Home</a>
@@ -37,8 +116,10 @@
   <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
   <a href="mailto:hello@goldcoastdjhire.com.au" class="mobile-email">hello@goldcoastdjhire.com.au</a>
 </div>
-<nav>
-  <a href="/" class="nav-logo"><img src="../logo.svg" alt="Gold Coast DJ Hire" /></a>
+
+<!-- NAV -->
+<nav id="main-nav" style="opacity:0;">
+  <a href="/" class="nav-logo"><img src="./logo.svg" alt="Gold Coast DJ Hire" /></a>
   <ul class="nav-links">
     <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
@@ -46,61 +127,186 @@
     <li><a href="/blog">Blog</a></li>
     <li class="nav-cta"><a href="/contact">Book Now</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<div class="page-hero">
-  <p class="section-label">Get in Touch</p>
-  <h1>Let's plan <em class="grad-text">your event</em></h1>
-</div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="video-container">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="./12548280-hd_1920_1080_30fps.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow" id="hero-eyebrow">Gold Coast</p>
+    <h1 class="hero-tagline" id="hero-tagline">Bring your event to life</h1>
+    <p class="hero-tagline-sub grad-text" id="hero-tagline-sub">Corporate, Weddings & Private Events</p>
+    <p class="hero-sub" id="hero-sub">Premium DJ services crafted for the moments that matter most. Every detail, every beat, in tune with your vision.</p>
+    <div class="hero-buttons" id="hero-buttons">
+      <a href="/contact" class="btn-primary">Book a Consultation</a>
+      <a href="/services" class="btn-outline">Our Services</a>
+    </div>
+    <div class="hero-ornament" id="hero-ornament"></div>
+  </div>
+</section>
 
-<section class="contact-section">
+<!-- ABOUT PREVIEW -->
+<section class="about" id="about">
   <div class="section-inner">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p class="section-label">Contact</p>
-        <h2>We'd love to hear <em class="grad-text">from you</em></h2>
-        <div class="divider"></div>
-        <p>Tell us about your event and we'll get back to you within 24 hours with a tailored quote and consultation time that suits you.</p>
-        <div class="contact-detail">
-          <span>✉</span>
-          <a href="mailto:hello@goldcoastdjhire.com.au">hello@goldcoastdjhire.com.au</a>
-        </div>
-        <div class="contact-detail">
-          <span>📍</span>
-          <span>Gold Coast, QLD</span>
-        </div>
+    <div class="about-grid">
+      <div class="about-image" id="about-image">
+        <img src="./about-photo.jpg" alt="DJ controller setup" />
       </div>
-      <div>
-        <div class="contact-form">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Email Address" />
+      <div class="about-text" id="about-text">
+        <p class="section-label">About</p>
+        <h2 class="about-title">Music that moves <em class="grad-text">people</em></h2>
+        <div class="divider"></div>
+        <p>With years of experience behind the decks, we bring a refined, professional approach to every event. Whether you're planning an intimate wedding reception or a large-scale corporate gala, we tailor every set to match your atmosphere perfectly.</p>
+        <p>We believe great music is more than just sound — it's the invisible thread that ties an evening together, elevates the energy in the room, and creates memories that last long after the night is over.</p>
+        <div class="stats">
+          <div>
+            <div class="stat-num" id="stat-gigs">0</div>
+            <div class="stat-label">Gigs Played</div>
           </div>
-          <div class="form-row">
-            <input type="tel" placeholder="Phone Number" />
-            <select>
-              <option value="" disabled selected>Event Type</option>
-              <option>Wedding</option>
-              <option>Corporate Event</option>
-              <option>Ceremony / Cocktail Hour</option>
-              <option>Private Event</option>
-              <option>Other</option>
-            </select>
+          <div>
+            <div class="stat-num" id="stat-varied">–</div>
+            <div class="stat-label">Event Types</div>
           </div>
-          <div class="form-row">
-            <input type="text" placeholder="Event Date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
-            <input type="text" placeholder="Approximate Guest Count" />
+          <div>
+            <div class="stat-num" id="stat-dedicated">0</div>
+            <div class="stat-label">Dedicated</div>
           </div>
-          <input type="text" placeholder="Venue Name / Location" />
-          <textarea placeholder="Tell us about your event — the vibe you're after, any special requests, and anything else we should know..."></textarea>
-          <button class="btn-primary" type="button">Send Enquiry</button>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="/about" class="btn-primary">Learn More</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SERVICES PREVIEW -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">Services tailored <em class="grad-text">for you</em></h2>
+    <div class="divider"></div>
+    <div class="services-grid">
+      <a href="/corporate" class="service-card">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Corporate Events" />
+        <div class="service-card-body">
+          <div class="service-icon">♦</div>
+          <h3>Corporate Events</h3>
+          <p>Polished, professional, and perfectly pitched for product launches, galas, award nights and company celebrations.</p>
+          <div class="card-arrow">Learn more →</div>
+        </div>
+      </a>
+      <a href="/wedding" class="service-card">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Wedding Receptions" />
+        <div class="service-card-body">
+          <div class="service-icon">♦</div>
+          <h3>Wedding Receptions</h3>
+          <p>From the first dance to the last song — a seamless musical journey that reflects your love story.</p>
+          <div class="card-arrow">Learn more →</div>
+        </div>
+      </a>
+      <a href="/ceremony-cocktail" class="service-card">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&q=80" alt="Ceremony and Cocktail Hour" />
+        <div class="service-card-body">
+          <div class="service-icon">♦</div>
+          <h3>Ceremony & Cocktail</h3>
+          <p>Elegant background music for ceremonies and cocktail hours — setting the perfect atmosphere.</p>
+          <div class="card-arrow">Learn more →</div>
+        </div>
+      </a>
+      <a href="/private" class="service-card">
+        <img class="service-card-img" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80" alt="Private Events" />
+        <div class="service-card-body">
+          <div class="service-icon">♦</div>
+          <h3>Private Events</h3>
+          <p>From intimate gatherings to exclusive celebrations — the same energy and professionalism every time.</p>
+          <div class="card-arrow">Learn more →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-inner">
+    <p class="section-label" style="text-align:center;">Kind Words</p>
+    <h2 class="section-title" style="text-align:center;">What clients <em class="grad-text">say</em></h2>
+    <div class="testimonial-carousel" id="testimonialCarousel">
+      <div class="testimonial-slide active">
+        <blockquote>"The dance floor was packed from the very first song. Absolutely incredible energy all night — our guests couldn't stop talking about it for weeks."</blockquote>
+        <div class="author"><span>Sarah & James</span> — Wedding Reception, Gold Coast</div>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"Professional, punctual and incredibly talented. The music at our annual corporate gala was perfectly calibrated — sophisticated yet energetic."</blockquote>
+        <div class="author"><span>Emma R.</span> — Corporate Events Director, Gold Coast</div>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"From our first consultation to the final song, every detail was handled flawlessly. We wouldn't hesitate to book again for any future event."</blockquote>
+        <div class="author"><span>Tom & Claire</span> — Wedding, Broadbeach</div>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"Our private birthday party was an absolute hit. Read the crowd perfectly all night — knew exactly when to bring the energy up and when to pull it back."</blockquote>
+        <div class="author"><span>Marcus T.</span> — Private Event, Gold Coast</div>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"We hired Gold Coast DJ Hire for our cocktail hour and reception. The transition between the two was seamless and the vibe was exactly what we wanted."</blockquote>
+        <div class="author"><span>Priya & Liam</span> — Wedding, Gold Coast</div>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"Highly recommend to anyone looking for a DJ who genuinely cares about your event. Went above and beyond to learn our favourite songs beforehand."</blockquote>
+        <div class="author"><span>Rachel M.</span> — 30th Birthday, Surfers Paradise</div>
+      </div>
+    </div>
+    <div class="testimonial-nav">
+      <button class="testimonial-arrow" id="prevBtn">&#8592;</button>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+      <button class="testimonial-arrow" id="nextBtn">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-inner">
+      <p class="section-label" style="text-align:center;">Get in Touch</p>
+      <h2 class="section-title" style="text-align:center;">Let's plan <em class="grad-text">your event</em></h2>
+      <div class="divider" style="margin: 1rem auto 1.5rem;"></div>
+      <p>Tell us about your event and we'll be in touch within 24 hours.</p>
+      <div class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Email Address" />
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="Phone Number" />
+          <select>
+            <option value="" disabled selected>Event Type</option>
+            <option>Wedding</option>
+            <option>Corporate Event</option>
+            <option>Ceremony / Cocktail Hour</option>
+            <option>Private Event</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <input type="text" placeholder="Event Date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
+        <textarea placeholder="Tell us about your event..."></textarea>
+        <button class="btn-primary" type="button">Send Enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <p>&copy; 2026 Gold Coast DJ Hire — All rights reserved.</p>
@@ -111,8 +317,117 @@
     </div>
   </div>
 </footer>
+
+<!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies to analyse website traffic. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
+  <p>We use cookies to analyse website traffic and improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
   <div class="cookie-buttons">
     <button class="btn-decline" onclick="declineCookies()">Decline</button>
-    <
+    <button class="btn-accept" onclick="acceptCookies()">Accept</button>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+  // Nav
+  anime({ targets: '#main-nav', opacity: [0,1], translateY: [-20,0], duration: 800, easing: 'easeOutExpo', delay: 200 });
+
+  // Hero
+  anime.timeline({ easing: 'easeOutExpo' })
+    .add({ targets: '#hero-eyebrow',    opacity: [0,1], translateY: [20,0], duration: 700 }, 400)
+    .add({ targets: '#hero-tagline',    opacity: [0,1], translateY: [30,0], duration: 800 }, 650)
+    .add({ targets: '#hero-tagline-sub',opacity: [0,1], translateY: [20,0], duration: 700 }, 850)
+    .add({ targets: '#hero-sub',        opacity: [0,1], translateY: [20,0], duration: 700 }, 1000)
+    .add({ targets: '#hero-buttons',    opacity: [0,1], translateY: [20,0], duration: 700 }, 1150)
+    .add({ targets: '#hero-ornament',   opacity: [0,1], scaleX: [0,1],     duration: 600, transformOrigin: 'left center' }, 1350);
+
+  // Scroll helper
+  function onVisible(sel, cb) {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) { cb(); obs.disconnect(); }
+    }, { threshold: 0.2 });
+    obs.observe(el);
+  }
+
+  // About
+  onVisible('#about-image', () => {
+    anime({ targets: '#about-image', opacity: [0,1], translateX: [-50,0], duration: 1000, easing: 'easeOutExpo' });
+    anime({ targets: '#about-text',  opacity: [0,1], translateX: [50,0],  duration: 1000, easing: 'easeOutExpo' });
+  });
+
+  // Stats
+  onVisible('.stats', () => {
+    let g = { val: 0 };
+    anime({ targets: g, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
+      update: () => { document.getElementById('stat-gigs').innerHTML = Math.round(g.val) + '+'; }
+    });
+    let d = { val: 0 };
+    anime({ targets: d, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
+      update: () => { document.getElementById('stat-dedicated').innerHTML = Math.round(d.val) + '%'; }
+    });
+    anime({ targets: '#stat-varied', opacity: [0,1], duration: 800, easing: 'easeOutExpo',
+      begin: () => { document.getElementById('stat-varied').innerHTML = 'Varied'; }
+    });
+  });
+
+  // Service cards
+  onVisible('.services-grid', () => {
+    anime({ targets: '.service-card', opacity: [0,1], translateY: [30,0], delay: anime.stagger(120), duration: 750, easing: 'easeOutExpo' });
+  });
+
+  // Testimonial carousel
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dotsContainer = document.getElementById('testimonialDots');
+  let current = 0;
+  let autoTimer;
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => { goTo(i); resetTimer(); };
+    dotsContainer.appendChild(d);
+  });
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dotsContainer.children[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dotsContainer.children[current].classList.add('active');
+  }
+
+  function resetTimer() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  document.getElementById('prevBtn').onclick = () => { goTo(current - 1); resetTimer(); };
+  document.getElementById('nextBtn').onclick = () => { goTo(current + 1); resetTimer(); };
+  autoTimer = setInterval(() => goTo(current + 1), 5000);
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+    mobileMenu.style.display = 'none';
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    if (isOpen) {
+      mobileMenu.style.display = 'flex';
+      setTimeout(() => mobileMenu.classList.add('open'), 10);
+      document.body.style.overflow = 'hidden';
+    } else {
+      closeMobile();
+    }
+  });
+
+  // Cookie
+  window.addEventListener('load', () => {
+    if (!localStorage.getItem('gc_cookie_consent')) {
+      setTimeout(() => docume
