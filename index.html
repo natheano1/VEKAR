@@ -170,7 +170,7 @@ footer{background:#141414;border-top:1px solid rgba(255,255,255,0.08);padding:2.
   <a href="/services" onclick="closeMobile()">Services</a>
   <a href="/blog" onclick="closeMobile()">Blog</a>
   <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
-  <a href="#" class="mobile-email" id="mobileEmail">hello&#64;goldcoastdjhire.com.au</a>
+  <a href="#" id="mobileEmail" class="mobile-email">hello&#64;goldcoastdjhire.com.au</a>
 </div>
 
 <!-- NAV -->
@@ -404,7 +404,12 @@ footer{background:#141414;border-top:1px solid rgba(255,255,255,0.08);padding:2.
     document.body.style.overflow = '';
   }
   window.closeMobile = closeMobile;
-  hamburger.addEventListener('click', function() {
+  // Close menu when tapping outside
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobile();
+  });
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
     var isOpen = hamburger.classList.toggle('open');
     if (isOpen) {
       mobileMenu.style.display = 'flex';
