@@ -30,7 +30,7 @@
   <a href="/services" onclick="closeMobile()">Services</a>
   <a href="/blog" onclick="closeMobile()">Blog</a>
   <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
-  <a href="mailto:hello@goldcoastdjhire.com.au" class="mobile-email">hello@goldcoastdjhire.com.au</a>
+  <a href="/cdn-cgi/l/email-protection#442c2128282b04232b2820272b253730202e2c2d36216a272b296a2531" class="mobile-email"><span class="__cf_email__" data-cfemail="c6aea3aaaaa986a1a9aaa2a5a9a7b5b2a2acaeafb4a3e8a5a9abe8a7b3">[email&#160;protected]</span></a>
 </div>
 <nav>
   <a href="/" class="nav-logo"><img src="../logo.svg" alt="Gold Coast DJ Hire" /></a>
@@ -52,9 +52,8 @@
 <section class="services-full">
   <div class="section-inner">
     <div class="service-row">
-      <div class="service-img"><div class="service-img-placeholder">Corporate Events Photo</div></div>
+      <div class="service-img" style="overflow:hidden;"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80" alt="Corporate Events DJ Gold Coast" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
       <div class="service-content">
-        <p class="section-label">Corporate</p>
         <h2>Corporate <em class="grad-text">Events</em></h2>
         <div class="divider"></div>
         <p>Polished, professional, and perfectly pitched. We set the right tone for product launches, galas, award nights, and company celebrations of any scale.</p>
@@ -64,7 +63,6 @@
     <div class="service-row reverse">
       <div class="service-img" style="background:none;border:none;"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80" alt="Wedding Reception DJ Gold Coast" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
       <div class="service-content">
-        <p class="section-label">Weddings</p>
         <h2>Wedding <em class="grad-text">Receptions</em></h2>
         <div class="divider"></div>
         <p>From the first dance to the last song, we curate a seamless musical journey that reflects your love story and keeps guests on the dance floor all night.</p>
@@ -72,9 +70,8 @@
       </div>
     </div>
     <div class="service-row">
-      <div class="service-img"><div class="service-img-placeholder">Ceremony & Cocktail Photo</div></div>
+      <div class="service-img" style="overflow:hidden;"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=1200&q=80" alt="Ceremony and Cocktail Hour DJ" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
       <div class="service-content">
-        <p class="section-label">Ceremony & Cocktail</p>
         <h2>Ceremony & <em class="grad-text">Cocktail Hour</em></h2>
         <div class="divider"></div>
         <p>Subtle, elegant background music for ceremonies and cocktail hours — setting a warm, welcoming atmosphere before the evening begins.</p>
@@ -82,9 +79,8 @@
       </div>
     </div>
     <div class="service-row reverse">
-      <div class="service-img"><div class="service-img-placeholder">Private Events Photo</div></div>
+      <div class="service-img" style="overflow:hidden;"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200&q=80" alt="Ceremony and Cocktail Hour DJ" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
       <div class="service-content">
-        <p class="section-label">Private Events</p>
         <h2>Private <em class="grad-text">Events</em></h2>
         <div class="divider"></div>
         <p>From intimate private gatherings to exclusive celebrations, we bring the same professionalism and energy to every occasion — big or small.</p>
@@ -105,35 +101,17 @@
   </div>
 </footer>
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies to analyse website traffic. See our <a href="mailto:hello@goldcoastdjhire.com.au">hello@goldcoastdjhire.com.au</a>
-      <a href="/privacy-policy">Privacy Policy</a>.</p>
+  <p>We use cookies to analyse website traffic. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
   <div class="cookie-buttons">
     <button class="btn-decline" onclick="declineCookies()">Decline</button>
     <button class="btn-accept" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   window.addEventListener('load', () => { if (!localStorage.getItem('gc_cookie_consent')) setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1500); });
   function acceptCookies() { localStorage.setItem('gc_cookie_consent','accepted'); document.getElementById('cookieBanner').classList.remove('visible'); }
   function declineCookies() { localStorage.setItem('gc_cookie_consent','declined'); document.getElementById('cookieBanner').classList.remove('visible'); }
 </script>
 <script>
   const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  function closeMobile() {
-    mobileMenu.classList.remove('open');
-    mobileMenu.style.display = 'none';
-    hamburger.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  hamburger.addEventListener('click', () => {
-    const isOpen = hamburger.classList.toggle('open');
-    if (isOpen) {
-      mobileMenu.style.display = 'flex';
-      setTimeout(() => mobileMenu.classList.add('open'), 10);
-      document.body.style.overflow = 'hidden';
-    } else { closeMobile(); }
-  });
-</script>
-</body>
-</html>
+  const mobile
