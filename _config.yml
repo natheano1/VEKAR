@@ -1,0 +1,10 @@
+title: Gold Coast DJ Hire
+description: Premium DJ services for weddings, corporate events and private parties on the Gold Coast.
+url: "https://www.goldcoastdjhire.com.au"
+
+# Remove .html from all URLs
+permalink: pretty
+
+# Don't include these in the build
+exclude:
+  - README.md
