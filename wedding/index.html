@@ -39,7 +39,7 @@
   <a href="/services" onclick="closeMobile()">Services</a>
   <a href="/blog" onclick="closeMobile()">Blog</a>
   <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
-  <a href="mailto:hello@goldcoastdjhire.com.au" class="mobile-email">hello@goldcoastdjhire.com.au</a>
+  <a href="/cdn-cgi/l/email-protection#6a020f0606052a0d05060e09050b191e0e000203180f44090507440b1f" class="mobile-email"><span class="__cf_email__" data-cfemail="ea828f868685aa8d85868e89858b999e8e808283988fc4898587c48b9f">[email&#160;protected]</span></a>
 </div>
 <nav>
   <a href="/" class="nav-logo"><img src="../logo.svg" alt="Gold Coast DJ Hire" /></a>
@@ -54,7 +54,7 @@
 </nav>
 
 <div class="service-hero">
-  <div class="service-hero-bg">Add your Wedding Receptions cover photo here</div>
+  <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80" alt="Wedding Reception DJ Gold Coast" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" />
   <div class="service-hero-overlay"></div>
   <div class="service-hero-content">
     <p class="section-label">Weddings</p>
@@ -162,14 +162,13 @@
   </div>
 </footer>
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies to analyse website traffic. See our <a href="mailto:hello@goldcoastdjhire.com.au">hello@goldcoastdjhire.com.au</a>
-      <a href="/privacy-policy">Privacy Policy</a>.</p>
+  <p>We use cookies to analyse website traffic. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
   <div class="cookie-buttons">
     <button class="btn-decline" onclick="declineCookies()">Decline</button>
     <button class="btn-accept" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
   function onVisible(sel, cb) {
     const el = document.querySelector(sel);
@@ -196,21 +195,4 @@
 </script>
 <script>
   const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  function closeMobile() {
-    mobileMenu.classList.remove('open');
-    mobileMenu.style.display = 'none';
-    hamburger.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  hamburger.addEventListener('click', () => {
-    const isOpen = hamburger.classList.toggle('open');
-    if (isOpen) {
-      mobileMenu.style.display = 'flex';
-      setTimeout(() => mobileMenu.classList.add('open'), 10);
-      document.body.style.overflow = 'hidden';
-    } else { closeMobile(); }
-  });
-</script>
-</body>
-</html>
+  const mobil
