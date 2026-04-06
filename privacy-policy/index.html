@@ -33,15 +33,16 @@
 </script>
 </head>
 <body>
-<!-- MOBILE MENU OVERLAY -->
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="/" onclick="closeMobile()">Home</a>
   <a href="/about" onclick="closeMobile()">About</a>
   <a href="/services" onclick="closeMobile()">Services</a>
   <a href="/blog" onclick="closeMobile()">Blog</a>
   <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
-  <a href="#" class="mobile-email" onclick="this.href='mailto:'+'hello'+'@'+'goldcoastdjhire.com.au';return true;">hello&#64;goldcoastdjhire.com.au</a>
+  <a href="#" id="footerEmail">hello&#64;goldcoastdjhire.com.au</a>
 </div>
+
 <nav>
   <a href="/" class="nav-logo"><img src="../logo.svg" alt="Gold Coast DJ Hire" /></a>
   <ul class="nav-links">
@@ -66,7 +67,7 @@
 
       <h2>1. Who we are</h2>
       <p>Gold Coast DJ Hire is a sole trader business providing professional DJ services for weddings, corporate events, private events and ceremonies across the Gold Coast regions of Queensland, Australia.</p>
-      <p>For any privacy related enquiries, please contact us at: <a href="#" class="email-link" onclick="this.href='mailto:'+'hello'+'@'+'goldcoastdjhire.com.au';return true;" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;">hello&#64;goldcoastdjhire.com.au</a></p>
+      <p>For any privacy related enquiries, please contact us at: <a href="#" id="footerEmail">hello&#64;goldcoastdjhire.com.au</a></p>
 
       <h2>2. What personal information we collect</h2>
       <p>We collect personal information that you voluntarily provide to us when you make an enquiry through our website contact form. This may include:</p>
@@ -83,7 +84,7 @@
       <p>We collect personal information in the following ways:</p>
       <ul>
         <li>Directly from you when you submit our website contact form</li>
-        <li>When you email us directly at <a href="#" id="ppEmail1">hello&#64;goldcoastdjhire.com.au</a></li>
+        <li>When you email us directly at <a href="#" id="footerEmail">hello&#64;goldcoastdjhire.com.au</a></li>
         <li>Automatically through cookies and analytics tools when you browse our website</li>
       </ul>
 
@@ -119,7 +120,7 @@
       <h2>11. Contact us</h2>
       <p>If you have any questions about this Privacy Policy, please contact us:</p>
       <ul>
-        <li>Email: <a href="#" id="ppEmail2">hello&#64;goldcoastdjhire.com.au</a></li>
+        <li>Email: <a href="#" id="footerEmail">hello&#64;goldcoastdjhire.com.au</a></li>
         <li>Website: <a href="https://www.goldcoastdjhire.com.au">goldcoastdjhire.com.au</a></li>
         <li>Location: Gold Coast, Queensland, Australia</li>
       </ul>
@@ -147,17 +148,17 @@
     <button class="btn-accept" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
-
 <script>
 (function() {
   var u = 'hello', d = 'goldcoastdjhire.com.au';
   var ml = 'mailto:' + u + '\x40' + d;
-  ['footerEmail','ppEmail1','ppEmail2'].forEach(function(id) {
+  ['footerEmail','mobileEmail','ppEmail1','ppEmail2'].forEach(function(id) {
     var el = document.getElementById(id);
     if (el) el.href = ml;
   });
   var hamburger = document.getElementById('hamburger');
   var mobileMenu = document.getElementById('mobileMenu');
+  if (!hamburger || !mobileMenu) return;
   function closeMobile() {
     mobileMenu.classList.remove('open');
     mobileMenu.style.display = 'none';
@@ -165,23 +166,26 @@
     document.body.style.overflow = '';
   }
   window.closeMobile = closeMobile;
-  if (hamburger) {
-    hamburger.addEventListener('click', function() {
-      var isOpen = hamburger.classList.toggle('open');
-      if (isOpen) {
-        mobileMenu.style.display = 'flex';
-        setTimeout(function(){ mobileMenu.classList.add('open'); }, 10);
-        document.body.style.overflow = 'hidden';
-      } else { closeMobile(); }
-    });
-  }
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = hamburger.classList.toggle('open');
+    if (isOpen) {
+      mobileMenu.style.display = 'flex';
+      setTimeout(function(){ mobileMenu.classList.add('open'); }, 10);
+      document.body.style.overflow = 'hidden';
+    } else { closeMobile(); }
+  });
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobile();
+  });
   window.addEventListener('load', function() {
-    if (!localStorage.getItem('gc_cookie_consent')) {
-      setTimeout(function(){ document.getElementById('cookieBanner').classList.add('visible'); }, 1500);
+    var banner = document.getElementById('cookieBanner');
+    if (banner && !localStorage.getItem('gc_cookie_consent')) {
+      setTimeout(function(){ banner.classList.add('visible'); }, 1500);
     }
   });
-  window.acceptCookies = function() { localStorage.setItem('gc_cookie_consent','accepted'); document.getElementById('cookieBanner').classList.remove('visible'); };
-  window.declineCookies = function() { localStorage.setItem('gc_cookie_consent','declined'); document.getElementById('cookieBanner').classList.remove('visible'); };
+  window.acceptCookies = function() { localStorage.setItem('gc_cookie_consent','accepted'); var b = document.getElementById('cookieBanner'); if (b) b.classList.remove('visible'); };
+  window.declineCookies = function() { localStorage.setItem('gc_cookie_consent','declined'); var b = document.getElementById('cookieBanner'); if (b) b.classList.remove('visible'); };
 })();
 </script>
 </body>

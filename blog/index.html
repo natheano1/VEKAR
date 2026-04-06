@@ -33,15 +33,16 @@
 </script>
 </head>
 <body>
-<!-- MOBILE MENU OVERLAY -->
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="/" onclick="closeMobile()">Home</a>
   <a href="/about" onclick="closeMobile()">About</a>
   <a href="/services" onclick="closeMobile()">Services</a>
   <a href="/blog" onclick="closeMobile()">Blog</a>
   <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
-  <a href="#" class="mobile-email" onclick="this.href='mailto:'+'hello'+'@'+'goldcoastdjhire.com.au';return true;">hello&#64;goldcoastdjhire.com.au</a>
+  <a href="#" id="footerEmail">hello&#64;goldcoastdjhire.com.au</a>
 </div>
+
 <nav>
   <a href="/" class="nav-logo"><img src="../logo.svg" alt="Gold Coast DJ Hire" /></a>
   <ul class="nav-links">
@@ -89,7 +90,7 @@
   <div class="footer-inner">
     <p>&copy; 2026 Gold Coast DJ Hire — All rights reserved.</p>
     <div class="footer-links">
-      <a href="#" class="email-link" onclick="this.href='mailto:'+'hello'+'@'+'goldcoastdjhire.com.au';return true;" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;">hello&#64;goldcoastdjhire.com.au</a>
+      <a href="#" id="footerEmail">hello&#64;goldcoastdjhire.com.au</a>
       <a href="/privacy-policy">Privacy Policy</a>
       <a href="/contact">Contact</a>
     </div>
@@ -103,4 +104,44 @@
   </div>
 </div>
 <script>
-  window.addEventListener('load', () => { if (!localStorage.getItem('gc_cookie_consent')) setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'
+(function() {
+  var u = 'hello', d = 'goldcoastdjhire.com.au';
+  var ml = 'mailto:' + u + '\x40' + d;
+  ['footerEmail','mobileEmail','ppEmail1','ppEmail2'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.href = ml;
+  });
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if (!hamburger || !mobileMenu) return;
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+    mobileMenu.style.display = 'none';
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  window.closeMobile = closeMobile;
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = hamburger.classList.toggle('open');
+    if (isOpen) {
+      mobileMenu.style.display = 'flex';
+      setTimeout(function(){ mobileMenu.classList.add('open'); }, 10);
+      document.body.style.overflow = 'hidden';
+    } else { closeMobile(); }
+  });
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobile();
+  });
+  window.addEventListener('load', function() {
+    var banner = document.getElementById('cookieBanner');
+    if (banner && !localStorage.getItem('gc_cookie_consent')) {
+      setTimeout(function(){ banner.classList.add('visible'); }, 1500);
+    }
+  });
+  window.acceptCookies = function() { localStorage.setItem('gc_cookie_consent','accepted'); var b = document.getElementById('cookieBanner'); if (b) b.classList.remove('visible'); };
+  window.declineCookies = function() { localStorage.setItem('gc_cookie_consent','declined'); var b = document.getElementById('cookieBanner'); if (b) b.classList.remove('visible'); };
+})();
+</script>
+</body>
+</html>
