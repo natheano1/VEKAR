@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Gold Coast DJ Hire — Corporate Events & Weddings</title>
-<meta name="description" content="Gold Coast DJ Hire — premium DJ services for weddings and corporate events on the Gold Coast. Professional, elegant, and tailored to your occasion." />
+<title>Gold Coast DJ Hire — Corporate, Weddings & Private Events</title>
+<meta name="description" content="Gold Coast DJ Hire — premium DJ services for weddings, corporate events and private parties on the Gold Coast and Brisbane." />
 <meta name="keywords" content="DJ hire Gold Coast, Gold Coast DJ, wedding DJ Gold Coast, corporate DJ Gold Coast, DJ services Gold Coast" />
 <link rel="canonical" href="https://www.goldcoastdjhire.com.au" />
-<meta property="og:title" content="Gold Coast DJ Hire — Corporate Events & Weddings" />
-<meta property="og:description" content="Premium DJ services for weddings and corporate events on the Gold Coast." />
+<meta property="og:title" content="Gold Coast DJ Hire — Corporate, Weddings & Private Events" />
+<meta property="og:description" content="Premium DJ services for weddings, corporate events and private parties on the Gold Coast." />
 <meta property="og:url" content="https://www.goldcoastdjhire.com.au" />
 <meta property="og:type" content="website" />
 <script type="application/ld+json">
@@ -18,7 +18,7 @@
   "name": "Gold Coast DJ Hire",
   "url": "https://www.goldcoastdjhire.com.au",
   "email": "hello@goldcoastdjhire.com.au",
-  "description": "Premium DJ services for weddings and corporate events on the Gold Coast.",
+  "description": "Premium DJ services for weddings, corporate events and private parties on the Gold Coast.",
   "address": {
     "@type": "PostalAddress",
     "addressRegion": "QLD",
@@ -29,144 +29,87 @@
   "serviceType": ["Wedding DJ", "Corporate DJ", "Private Event DJ", "Cocktail Hour DJ"]
 }
 </script>
+<link rel="stylesheet" href="./style.css" />
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --peach: #FFE1D7;
-    --light-blue: #84AFFB;
-    --blue: #0259DD;
-    --coral: #FF6648;
-    --dark: #012F7A;
-    --text: #011A45;
-    --text-muted: #2A4A8A;
-    --white: #FFFFFF;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Georgia', serif; background: var(--white); color: var(--text); line-height: 1.7; }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; width: 100%; z-index: 100;
-    background: rgba(255,255,255,0.96);
-    border-bottom: 2px solid var(--light-blue);
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1rem 3rem; opacity: 0;
-  }
-  .nav-logo { font-size: 1.2rem; font-weight: bold; letter-spacing: 0.12em; color: var(--blue); text-transform: uppercase; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { text-decoration: none; font-family: 'Arial', sans-serif; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); transition: color 0.2s; }
-  .nav-links a:hover { color: var(--coral); }
-
-  /* HERO VIDEO */
+  /* HERO */
   .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-  .video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-  .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-  .hero-overlay { position: absolute; inset: 0; background: rgba(1, 23, 70, 0.65); z-index: 1; }
-  .hero-inner { position: relative; z-index: 2; max-width: 720px; padding: 6rem 2rem 4rem; }
-  .hero-eyebrow { font-family: 'Arial', sans-serif; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--light-blue); margin-bottom: 1.2rem; opacity: 0; }
-  .hero-tagline { font-size: clamp(2.6rem, 6vw, 5rem); font-weight: normal; color: #FFFFFF; line-height: 1.1; margin-bottom: 1rem; font-style: italic; opacity: 0; }
-  .hero-sub { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: rgba(255,225,215,0.9); margin-bottom: 2.5rem; line-height: 1.9; max-width: 480px; margin-left: auto; margin-right: auto; opacity: 0; }
+  .video-container { position: absolute; inset: 0; z-index: 0; }
+  .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.5) 50%, rgba(13,13,13,0.85) 100%); z-index: 1; }
+  .hero-inner { position: relative; z-index: 2; max-width: 800px; padding: 7rem 2rem 4rem; }
+  .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1.2rem; opacity: 0; }
+  .hero-tagline { font-family: 'Georgia', serif; font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: normal; color: #fff; line-height: 1.1; margin-bottom: 0.5rem; font-style: italic; opacity: 0; }
+  .hero-tagline-sub { font-family: 'Georgia', serif; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: normal; font-style: italic; opacity: 0; margin-bottom: 1.5rem; }
+  .hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; line-height: 1.9; max-width: 500px; margin-left: auto; margin-right: auto; opacity: 0; }
   .hero-buttons { opacity: 0; }
-  .btn-primary { display: inline-block; padding: 0.85rem 2.5rem; background: var(--coral); color: #FFFFFF; text-decoration: none; font-family: 'Arial', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.2s; }
-  .btn-primary:hover { background: #e5502f; }
-  .btn-outline { display: inline-block; padding: 0.85rem 2.5rem; background: transparent; color: #FFFFFF; text-decoration: none; font-family: 'Arial', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; border: 1.5px solid rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s; margin-left: 1rem; }
-  .btn-outline:hover { background: rgba(255,255,255,0.12); }
-  .hero-ornament { margin: 2.5rem auto 0; width: 60px; height: 2px; background: var(--light-blue); opacity: 0; }
-
-  /* SECTIONS */
-  section { padding: 6rem 2rem; }
-  .section-inner { max-width: 1000px; margin: 0 auto; }
-  .section-label { font-family: 'Arial', sans-serif; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.75rem; }
-  .section-title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--blue); font-weight: normal; margin-bottom: 1.5rem; }
-  .section-title em { font-style: italic; color: var(--coral); }
-  .divider { width: 40px; height: 2px; background: var(--light-blue); margin: 1.5rem 0; }
+  .hero-ornament { margin: 2.5rem auto 0; width: 60px; height: 2px; background: linear-gradient(90deg, #FF2D8B, #2060FF); opacity: 0; }
 
   /* ABOUT */
-  .about { background: var(--white); }
+  .about { background: var(--dark); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .about-image { aspect-ratio: 4/5; overflow: hidden; background: var(--peach); opacity: 0; }
+  .about-image { aspect-ratio: 4/5; overflow: hidden; background: var(--card); opacity: 0; border: 1px solid var(--border); }
   .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .about-text { opacity: 0; }
-  .about-text p { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.2rem; }
+  .about-text p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.2rem; }
   .stats { display: flex; gap: 2.5rem; margin-top: 2rem; }
-  .stat-num { font-size: 2rem; color: var(--blue); font-weight: normal; }
-  .stat-label { font-family: 'Arial', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+  .stat-num { font-family: 'Georgia', serif; font-size: 2.2rem; font-weight: normal; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .stat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.2rem; }
+  .about-title { font-family: 'Georgia', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: normal; line-height: 1.2; margin-bottom: 1.5rem; }
 
-  /* SERVICES */
-  .services { background: var(--peach); }
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3rem; }
-  .service-card { background: var(--white); padding: 2.5rem 2rem; border-top: 3px solid var(--coral); opacity: 0; transform: translateY(30px); }
-  .service-icon { font-size: 1.5rem; margin-bottom: 1.2rem; color: var(--coral); }
-  .service-card h3 { font-size: 1.15rem; color: var(--blue); font-weight: normal; margin-bottom: 0.75rem; }
-  .service-card p { font-family: 'Arial', sans-serif; font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
+  /* SERVICES PREVIEW */
+  .services { background: var(--black); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .service-card { background: var(--card); padding: 2.5rem 2rem; border: 1px solid var(--border); opacity: 0; transform: translateY(30px); text-decoration: none; color: inherit; display: block; transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient); }
+  .service-card:hover { border-color: rgba(255,45,139,0.4); transform: translateY(-4px); }
+  .service-icon { font-size: 1.5rem; margin-bottom: 1.2rem; }
+  .service-card h3 { font-family: 'Georgia', serif; font-size: 1.15rem; color: #fff; font-weight: normal; margin-bottom: 0.75rem; }
+  .service-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
+  .service-card .card-arrow { margin-top: 1.5rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
   /* TESTIMONIALS */
-  .testimonials { background: var(--blue); }
-  .testimonials .section-label { color: var(--light-blue); }
-  .testimonials .section-title { color: #FFFFFF; }
-  .testimonials .divider { background: var(--coral); }
-  .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
-  .testimonial-card { border-left: 3px solid var(--coral); padding: 1.5rem 2rem; }
-  .testimonial-card blockquote { font-size: 1rem; color: var(--peach); line-height: 1.8; margin-bottom: 1rem; font-style: italic; }
-  .testimonial-author { font-family: 'Arial', sans-serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--light-blue); }
+  .testimonials { background: var(--dark); }
+  .testimonial-carousel { position: relative; max-width: 780px; margin: 3rem auto 0; min-height: 180px; }
+  .testimonial-slide { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transition: opacity 0.8s ease; pointer-events: none; text-align: center; }
+  .testimonial-slide.active { opacity: 1; pointer-events: auto; }
+  .testimonial-slide blockquote { font-family: 'Georgia', serif; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.85); line-height: 1.8; font-style: italic; margin-bottom: 1.5rem; }
+  .testimonial-slide .author { font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+  .testimonial-slide .author span { background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .testimonial-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 10rem; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; transition: background 0.3s; padding: 0; }
+  .dot.active { background: #FF2D8B; }
 
-  /* CONTACT */
-  .contact { background: var(--light-blue); }
-  .contact-inner { max-width: 620px; margin: 0 auto; text-align: center; }
-  .contact-inner p { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: var(--dark); margin-bottom: 2.5rem; }
+  /* CONTACT PREVIEW */
+  .contact { background: var(--black); }
+  .contact-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+  .contact-inner > p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2.5rem; }
   .contact-form { text-align: left; display: flex; flex-direction: column; gap: 1rem; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 0.85rem 1rem; font-family: 'Arial', sans-serif; font-size: 0.9rem; background: var(--white); color: var(--text); border: 1px solid var(--blue); outline: none; transition: border-color 0.2s; appearance: none; }
-  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--coral); }
+  .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 0.9rem 1rem; font-size: 0.9rem; background: var(--card); color: var(--text); border: 1px solid var(--border); outline: none; transition: border-color 0.2s; appearance: none; font-family: 'Arial', sans-serif; }
+  .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-muted); }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: #FF2D8B; }
+  .contact-form select option { background: var(--card); }
   .contact-form textarea { resize: vertical; min-height: 120px; }
   .contact-form .btn-primary { width: 100%; text-align: center; font-size: 0.82rem; }
 
-  /* FOOTER */
-  footer { background: var(--dark); color: var(--light-blue); padding: 2.5rem; font-family: 'Arial', sans-serif; font-size: 0.8rem; letter-spacing: 0.05em; }
-  .footer-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-  footer span { color: #FFFFFF; }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a { color: var(--light-blue); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--coral); }
-
-  /* COOKIE BANNER */
-  .cookie-banner {
-    position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999;
-    background: var(--dark); color: var(--peach);
-    padding: 1.2rem 2rem; display: flex; align-items: center;
-    justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
-    border-top: 2px solid var(--coral);
-    transform: translateY(100%); transition: transform 0.4s ease;
-  }
-  .cookie-banner.visible { transform: translateY(0); }
-  .cookie-banner p { font-family: 'Arial', sans-serif; font-size: 0.85rem; line-height: 1.6; flex: 1; }
-  .cookie-banner a { color: var(--light-blue); text-decoration: underline; }
-  .cookie-buttons { display: flex; gap: 0.75rem; flex-shrink: 0; }
-  .btn-accept { padding: 0.6rem 1.5rem; background: var(--coral); color: #FFFFFF; border: none; cursor: pointer; font-family: 'Arial', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.2s; }
-  .btn-accept:hover { background: #e5502f; }
-  .btn-decline { padding: 0.6rem 1.5rem; background: transparent; color: var(--light-blue); border: 1px solid var(--light-blue); cursor: pointer; font-family: 'Arial', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.2s; }
-  .btn-decline:hover { background: rgba(132,175,251,0.1); }
-
   @media (max-width: 700px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { gap: 1.2rem; }
-    .about-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
     .form-row { grid-template-columns: 1fr; }
-    .stats { gap: 1.5rem; }
-    .btn-outline { margin-left: 0; margin-top: 0.75rem; display: block; }
+    .stats { gap: 1.5rem; flex-wrap: wrap; }
   }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav id="main-nav">
-  <div class="nav-logo">Gold Coast DJ Hire</div>
+<nav id="main-nav" style="opacity:0;">
+  <a href="./index.html" class="nav-logo"><img src="./logo.png" alt="Gold Coast DJ Hire" /></a>
   <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li><a href="./services.html">Services</a></li>
+    <li><a href="./blog.html">Blog</a></li>
+    <li class="nav-cta"><a href="./contact.html">Book Now</a></li>
   </ul>
 </nav>
 
@@ -179,18 +122,19 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <p class="hero-eyebrow" id="hero-eyebrow">Corporate Events &amp; Weddings</p>
+    <p class="hero-eyebrow" id="hero-eyebrow">Gold Coast & Brisbane</p>
     <h1 class="hero-tagline" id="hero-tagline">Bring your event to life</h1>
-    <p class="hero-sub" id="hero-sub">Premium DJ services crafted for the moments that matter most. From elegant weddings to polished corporate events — every detail, every beat, in tune with your vision.</p>
+    <p class="hero-tagline-sub grad-text" id="hero-tagline-sub">Corporate, Weddings & Private Events</p>
+    <p class="hero-sub" id="hero-sub">Premium DJ services crafted for the moments that matter most. Every detail, every beat, in tune with your vision.</p>
     <div class="hero-buttons" id="hero-buttons">
-      <a href="#contact" class="btn-primary">Book a Consultation</a>
-      <a href="#services" class="btn-outline">Our Services</a>
+      <a href="./contact.html" class="btn-primary">Book a Consultation</a>
+      <a href="./services.html" class="btn-outline">Our Services</a>
     </div>
     <div class="hero-ornament" id="hero-ornament"></div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT PREVIEW -->
 <section class="about" id="about">
   <div class="section-inner">
     <div class="about-grid">
@@ -199,7 +143,7 @@
       </div>
       <div class="about-text" id="about-text">
         <p class="section-label">About</p>
-        <h2 class="section-title">Music that <em>moves</em> people</h2>
+        <h2 class="about-title">Music that moves <em class="grad-text">people</em></h2>
         <div class="divider"></div>
         <p>With years of experience behind the decks, we bring a refined, professional approach to every event. Whether you're planning an intimate wedding reception or a large-scale corporate gala, we tailor every set to match your atmosphere perfectly.</p>
         <p>We believe great music is more than just sound — it's the invisible thread that ties an evening together, elevates the energy in the room, and creates memories that last long after the night is over.</p>
@@ -217,90 +161,112 @@
             <div class="stat-label">Dedicated</div>
           </div>
         </div>
+        <div style="margin-top:2rem;">
+          <a href="./about.html" class="btn-primary">Learn More</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES PREVIEW -->
 <section class="services" id="services">
   <div class="section-inner">
     <p class="section-label">What We Offer</p>
-    <h2 class="section-title">Services tailored <em>for you</em></h2>
+    <h2 class="section-title">Services tailored <em class="grad-text">for you</em></h2>
     <div class="divider"></div>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">♦</div>
-        <h3>Wedding Receptions</h3>
-        <p>From the first dance to the last song, we curate a seamless musical journey that reflects your love story and keeps guests on the dance floor all night.</p>
-      </div>
-      <div class="service-card">
+      <a href="./services/corporate.html" class="service-card">
         <div class="service-icon">♦</div>
         <h3>Corporate Events</h3>
-        <p>Polished, professional, and perfectly pitched. We set the right tone for product launches, galas, award nights, and company celebrations of any scale.</p>
-      </div>
-      <div class="service-card">
+        <p>Polished, professional, and perfectly pitched for product launches, galas, award nights and company celebrations.</p>
+        <div class="card-arrow">Learn more →</div>
+      </a>
+      <a href="./services/wedding.html" class="service-card">
         <div class="service-icon">♦</div>
-        <h3>Ceremony &amp; Cocktail Hour</h3>
-        <p>Subtle, elegant background music for ceremonies and cocktail hours — setting a warm, welcoming atmosphere before the evening begins.</p>
-      </div>
-      <div class="service-card">
+        <h3>Wedding Receptions</h3>
+        <p>From the first dance to the last song — a seamless musical journey that reflects your love story.</p>
+        <div class="card-arrow">Learn more →</div>
+      </a>
+      <a href="./services/ceremony-cocktail.html" class="service-card">
+        <div class="service-icon">♦</div>
+        <h3>Ceremony & Cocktail</h3>
+        <p>Elegant background music for ceremonies and cocktail hours — setting the perfect atmosphere.</p>
+        <div class="card-arrow">Learn more →</div>
+      </a>
+      <a href="./services/private.html" class="service-card">
         <div class="service-icon">♦</div>
         <h3>Private Events</h3>
-        <p>From intimate private gatherings to exclusive celebrations, we bring the same professionalism and energy to every occasion — big or small.</p>
-      </div>
+        <p>From intimate gatherings to exclusive celebrations — the same energy and professionalism every time.</p>
+        <div class="card-arrow">Learn more →</div>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
+<section class="testimonials">
   <div class="section-inner">
-    <p class="section-label">Kind Words</p>
-    <h2 class="section-title">What clients <em>say</em></h2>
-    <div class="divider"></div>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <blockquote>"Add your first testimonial here — share what a client said about your performance or professionalism."</blockquote>
-        <div class="testimonial-author">Client Name — Event Type, Year</div>
+    <p class="section-label" style="text-align:center;">Kind Words</p>
+    <h2 class="section-title" style="text-align:center;">What clients <em class="grad-text">say</em></h2>
+    <div class="testimonial-carousel" id="testimonialCarousel">
+      <div class="testimonial-slide active">
+        <blockquote>"The dance floor was packed from the very first song. Absolutely incredible energy all night — our guests couldn't stop talking about it for weeks."</blockquote>
+        <div class="author"><span>Sarah & James</span> — Wedding Reception, Gold Coast</div>
       </div>
-      <div class="testimonial-card">
-        <blockquote>"A second testimonial can go here. Even a short, genuine quote goes a long way in building trust with new clients."</blockquote>
-        <div class="testimonial-author">Client Name — Event Type, Year</div>
+      <div class="testimonial-slide">
+        <blockquote>"Professional, punctual and incredibly talented. The music at our annual corporate gala was perfectly calibrated — sophisticated yet energetic."</blockquote>
+        <div class="author"><span>Emma R.</span> — Corporate Events Director, Brisbane</div>
       </div>
-      <div class="testimonial-card">
-        <blockquote>"A third quote here. Once you've collected feedback, simply swap these placeholders out for the real thing."</blockquote>
-        <div class="testimonial-author">Client Name — Event Type, Year</div>
+      <div class="testimonial-slide">
+        <blockquote>"From our first consultation to the final song, every detail was handled flawlessly. We wouldn't hesitate to book again for any future event."</blockquote>
+        <div class="author"><span>Tom & Claire</span> — Wedding, Broadbeach</div>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"Our private birthday party was an absolute hit. Read the crowd perfectly all night — knew exactly when to bring the energy up and when to pull it back."</blockquote>
+        <div class="author"><span>Marcus T.</span> — Private Event, Gold Coast</div>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"We hired Gold Coast DJ Hire for our cocktail hour and reception. The transition between the two was seamless and the vibe was exactly what we wanted."</blockquote>
+        <div class="author"><span>Priya & Liam</span> — Wedding, Brisbane</div>
+      </div>
+      <div class="testimonial-slide">
+        <blockquote>"Highly recommend to anyone looking for a DJ who genuinely cares about your event. Went above and beyond to learn our favourite songs beforehand."</blockquote>
+        <div class="author"><span>Rachel M.</span> — 30th Birthday, Surfers Paradise</div>
       </div>
     </div>
+    <div class="testimonial-dots" id="testimonialDots"></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="contact-inner">
-    <p class="section-label">Get in Touch</p>
-    <h2 class="section-title">Let's plan <em>your</em> event</h2>
-    <div class="divider" style="margin: 1rem auto 1.5rem;"></div>
-    <p>Tell us about your event and we'll be in touch within 24 hours to discuss how we can make it unforgettable.</p>
-    <div class="contact-form">
-      <div class="form-row">
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Email Address" />
+  <div class="section-inner">
+    <div class="contact-inner">
+      <p class="section-label" style="text-align:center;">Get in Touch</p>
+      <h2 class="section-title" style="text-align:center;">Let's plan <em class="grad-text">your event</em></h2>
+      <div class="divider" style="margin: 1rem auto 1.5rem;"></div>
+      <p>Tell us about your event and we'll be in touch within 24 hours.</p>
+      <div class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Email Address" />
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="Phone Number" />
+          <select>
+            <option value="" disabled selected>Event Type</option>
+            <option>Wedding</option>
+            <option>Corporate Event</option>
+            <option>Ceremony / Cocktail Hour</option>
+            <option>Private Event</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <input type="text" placeholder="Event Date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
+        <textarea placeholder="Tell us about your event..."></textarea>
+        <button class="btn-primary" type="button">Send Enquiry</button>
       </div>
-      <div class="form-row">
-        <input type="tel" placeholder="Phone Number" />
-        <select>
-          <option value="" disabled selected>Event Type</option>
-          <option>Wedding</option>
-          <option>Corporate Event</option>
-          <option>Private Event</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <input type="text" placeholder="Event Date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
-      <textarea placeholder="Tell us about your event..."></textarea>
-      <button class="btn-primary" type="button">Send Enquiry</button>
     </div>
   </div>
 </section>
@@ -308,114 +274,100 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <p>&copy; 2026 <span>Gold Coast DJ Hire</span> — All rights reserved.</p>
+    <p>&copy; 2026 Gold Coast DJ Hire — All rights reserved.</p>
     <div class="footer-links">
       <a href="./privacy-policy.html">Privacy Policy</a>
-      <a href="#contact">Contact</a>
+      <a href="./contact.html">Contact</a>
     </div>
   </div>
 </footer>
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies to analyse website traffic and improve your experience. By clicking "Accept", you consent to our use of cookies in accordance with our <a href="./privacy-policy.html">Privacy Policy</a>.</p>
+  <p>We use cookies to analyse website traffic and improve your experience. See our <a href="./privacy-policy.html">Privacy Policy</a>.</p>
   <div class="cookie-buttons">
     <button class="btn-decline" onclick="declineCookies()">Decline</button>
     <button class="btn-accept" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
 
-<!-- Anime.js via CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
-  // ── 1. NAV slides down on load
-  anime({
-    targets: '#main-nav',
-    opacity: [0, 1],
-    translateY: [-20, 0],
-    duration: 800,
-    easing: 'easeOutExpo',
-    delay: 200
-  });
+  // Nav
+  anime({ targets: '#main-nav', opacity: [0,1], translateY: [-20,0], duration: 800, easing: 'easeOutExpo', delay: 200 });
 
-  // ── 2. HERO elements stagger in on load
+  // Hero
   anime.timeline({ easing: 'easeOutExpo' })
-    .add({ targets: '#hero-eyebrow', opacity: [0, 1], translateY: [20, 0], duration: 700 }, 400)
-    .add({ targets: '#hero-tagline', opacity: [0, 1], translateY: [30, 0], duration: 800 }, 650)
-    .add({ targets: '#hero-sub',     opacity: [0, 1], translateY: [20, 0], duration: 700 }, 950)
-    .add({ targets: '#hero-buttons', opacity: [0, 1], translateY: [20, 0], duration: 700 }, 1150)
-    .add({ targets: '#hero-ornament',opacity: [0, 1], scaleX: [0, 1],     duration: 600, transformOrigin: 'left center' }, 1350);
+    .add({ targets: '#hero-eyebrow',    opacity: [0,1], translateY: [20,0], duration: 700 }, 400)
+    .add({ targets: '#hero-tagline',    opacity: [0,1], translateY: [30,0], duration: 800 }, 650)
+    .add({ targets: '#hero-tagline-sub',opacity: [0,1], translateY: [20,0], duration: 700 }, 850)
+    .add({ targets: '#hero-sub',        opacity: [0,1], translateY: [20,0], duration: 700 }, 1000)
+    .add({ targets: '#hero-buttons',    opacity: [0,1], translateY: [20,0], duration: 700 }, 1150)
+    .add({ targets: '#hero-ornament',   opacity: [0,1], scaleX: [0,1],     duration: 600, transformOrigin: 'left center' }, 1350);
 
-  // ── Helper: fire callback once when element scrolls into view
-  function onVisible(selector, callback) {
-    const el = document.querySelector(selector);
+  // Scroll helper
+  function onVisible(sel, cb) {
+    const el = document.querySelector(sel);
     if (!el) return;
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { callback(); obs.disconnect(); }
-      });
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) { cb(); obs.disconnect(); }
     }, { threshold: 0.2 });
     obs.observe(el);
   }
 
-  // ── 3. ABOUT photo slides in from left, text from right
+  // About
   onVisible('#about-image', () => {
-    anime({ targets: '#about-image', opacity: [0, 1], translateX: [-50, 0], duration: 1000, easing: 'easeOutExpo' });
-    anime({ targets: '#about-text',  opacity: [0, 1], translateX: [50, 0],  duration: 1000, easing: 'easeOutExpo' });
+    anime({ targets: '#about-image', opacity: [0,1], translateX: [-50,0], duration: 1000, easing: 'easeOutExpo' });
+    anime({ targets: '#about-text',  opacity: [0,1], translateX: [50,0],  duration: 1000, easing: 'easeOutExpo' });
   });
 
-  // ── 4. STATS count up when about section is visible
+  // Stats
   onVisible('.stats', () => {
-    // Gigs: counts to 100 then appends +
-    let gigsObj = { val: 0 };
-    anime({
-      targets: gigsObj, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
-      update: () => { document.getElementById('stat-gigs').innerHTML = Math.round(gigsObj.val) + '+'; }
+    let g = { val: 0 };
+    anime({ targets: g, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
+      update: () => { document.getElementById('stat-gigs').innerHTML = Math.round(g.val) + '+'; }
     });
-    // Dedicated: counts to 100 then appends %
-    let dedObj = { val: 0 };
-    anime({
-      targets: dedObj, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
-      update: () => { document.getElementById('stat-dedicated').innerHTML = Math.round(dedObj.val) + '%'; }
+    let d = { val: 0 };
+    anime({ targets: d, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
+      update: () => { document.getElementById('stat-dedicated').innerHTML = Math.round(d.val) + '%'; }
     });
-    // Varied — fade in the word
-    anime({
-      targets: '#stat-varied', opacity: [0, 1], duration: 1000, easing: 'easeOutExpo',
+    anime({ targets: '#stat-varied', opacity: [0,1], duration: 800, easing: 'easeOutExpo',
       begin: () => { document.getElementById('stat-varied').innerHTML = 'Varied'; }
     });
   });
 
-  // ── 5. SERVICE CARDS stagger up on scroll
+  // Service cards
   onVisible('.services-grid', () => {
-    anime({
-      targets: '.service-card',
-      opacity: [0, 1],
-      translateY: [30, 0],
-      delay: anime.stagger(130),
-      duration: 750,
-      easing: 'easeOutExpo'
-    });
+    anime({ targets: '.service-card', opacity: [0,1], translateY: [30,0], delay: anime.stagger(120), duration: 750, easing: 'easeOutExpo' });
   });
-  // ── Cookie banner
+
+  // Testimonial carousel
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dotsContainer = document.getElementById('testimonialDots');
+  let current = 0;
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsContainer.appendChild(d);
+  });
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dotsContainer.children[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    dotsContainer.children[current].classList.add('active');
+  }
+  setInterval(() => goTo((current + 1) % slides.length), 5000);
+
+  // Cookie
   window.addEventListener('load', () => {
-    const consent = localStorage.getItem('gc_cookie_consent');
-    if (!consent) {
-      setTimeout(() => {
-        document.getElementById('cookieBanner').classList.add('visible');
-      }, 1500);
+    if (!localStorage.getItem('gc_cookie_consent')) {
+      setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1500);
     }
   });
-
-  function acceptCookies() {
-    localStorage.setItem('gc_cookie_consent', 'accepted');
-    document.getElementById('cookieBanner').classList.remove('visible');
-  }
-
-  function declineCookies() {
-    localStorage.setItem('gc_cookie_consent', 'declined');
-    document.getElementById('cookieBanner').classList.remove('visible');
-  }
+  function acceptCookies() { localStorage.setItem('gc_cookie_consent','accepted'); document.getElementById('cookieBanner').classList.remove('visible'); }
+  function declineCookies() { localStorage.setItem('gc_cookie_consent','declined'); document.getElementById('cookieBanner').classList.remove('visible'); }
 </script>
-
 </body>
 </html>
