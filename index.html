@@ -36,7 +36,7 @@
   .video-container { position: absolute; inset: 0; z-index: 0; }
   .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.5) 50%, rgba(13,13,13,0.85) 100%); z-index: 1; }
-  .hero-inner { position: relative; z-index: 2; max-width: 800px; padding: 12rem 2rem 4rem; }
+  .hero-inner { position: relative; z-index: 2; max-width: 800px; padding: 5rem 2rem 4rem; margin-top: -4rem; }
   .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1.2rem; opacity: 0; }
   .hero-tagline { font-family: 'Georgia', serif; font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: normal; color: #fff; line-height: 1.1; margin-bottom: 0.5rem; font-style: italic; opacity: 0; }
   .hero-tagline-sub { font-family: 'Georgia', serif; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: normal; font-style: italic; opacity: 0; margin-bottom: 1.5rem; }
@@ -107,9 +107,19 @@
 </head>
 <body>
 
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/" onclick="closeMobile()">Home</a>
+  <a href="/about" onclick="closeMobile()">About</a>
+  <a href="/services" onclick="closeMobile()">Services</a>
+  <a href="/blog" onclick="closeMobile()">Blog</a>
+  <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
+  <a href="mailto:hello@goldcoastdjhire.com.au" class="mobile-email">hello@goldcoastdjhire.com.au</a>
+</div>
+
 <!-- NAV -->
 <nav id="main-nav" style="opacity:0;">
-  <a href="/" class="nav-logo"><img src="./logo.png" alt="Gold Coast DJ Hire" /></a>
+  <a href="/" class="nav-logo"><img src="./logo.svg" alt="Gold Coast DJ Hire" /></a>
   <ul class="nav-links">
     <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
@@ -117,6 +127,9 @@
     <li><a href="/blog">Blog</a></li>
     <li class="nav-cta"><a href="/contact">Book Now</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -298,6 +311,7 @@
   <div class="footer-inner">
     <p>&copy; 2026 Gold Coast DJ Hire — All rights reserved.</p>
     <div class="footer-links">
+      <a href="mailto:hello@goldcoastdjhire.com.au">hello@goldcoastdjhire.com.au</a>
       <a href="/privacy-policy">Privacy Policy</a>
       <a href="/contact">Contact</a>
     </div>
@@ -392,6 +406,26 @@
   document.getElementById('prevBtn').onclick = () => { goTo(current - 1); resetTimer(); };
   document.getElementById('nextBtn').onclick = () => { goTo(current + 1); resetTimer(); };
   autoTimer = setInterval(() => goTo(current + 1), 5000);
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+    mobileMenu.style.display = 'none';
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    if (isOpen) {
+      mobileMenu.style.display = 'flex';
+      setTimeout(() => mobileMenu.classList.add('open'), 10);
+      document.body.style.overflow = 'hidden';
+    } else {
+      closeMobile();
+    }
+  });
 
   // Cookie
   window.addEventListener('load', () => {
