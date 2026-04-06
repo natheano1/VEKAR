@@ -3,122 +3,170 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Gold Coast DJ Hire — Corporate, Weddings & Private Events</title>
+<title>Gold Coast DJ Hire — Corporate, Weddings &amp; Private Events</title>
 <meta name="description" content="Gold Coast DJ Hire — premium DJ services for weddings, corporate events and private parties on the Gold Coast." />
 <meta name="keywords" content="DJ hire Gold Coast, Gold Coast DJ, wedding DJ Gold Coast, corporate DJ Gold Coast, DJ services Gold Coast" />
 <link rel="canonical" href="https://www.goldcoastdjhire.com.au" />
-<meta property="og:title" content="Gold Coast DJ Hire — Corporate, Weddings & Private Events" />
+<meta property="og:title" content="Gold Coast DJ Hire — Corporate, Weddings &amp; Private Events" />
 <meta property="og:description" content="Premium DJ services for weddings, corporate events and private parties on the Gold Coast." />
 <meta property="og:url" content="https://www.goldcoastdjhire.com.au" />
 <meta property="og:type" content="website" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Gold Coast DJ Hire",
-  "url": "https://www.goldcoastdjhire.com.au",
-  "email": "hello@goldcoastdjhire.com.au",
-  "description": "Premium DJ services for weddings, corporate events and private parties on the Gold Coast.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "QLD",
-    "addressCountry": "AU",
-    "addressLocality": "Gold Coast"
-  },
-  "areaServed": ["Gold Coast", "Queensland"],
-  "serviceType": ["Wedding DJ", "Corporate DJ", "Private Event DJ", "Cocktail Hour DJ"]
-}
-</script>
-<link rel="stylesheet" href="./style.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Gold Coast DJ Hire","url":"https://www.goldcoastdjhire.com.au","email":"hello@goldcoastdjhire.com.au","description":"Premium DJ services for weddings, corporate events and private parties on the Gold Coast.","address":{"@type":"PostalAddress","addressRegion":"QLD","addressCountry":"AU","addressLocality":"Gold Coast"},"areaServed":["Gold Coast","Queensland"],"serviceType":["Wedding DJ","Corporate DJ","Private Event DJ","Cocktail Hour DJ"]}</script>
 <style>
-  /* HERO */
-  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-  .video-container { position: absolute; inset: 0; z-index: 0; }
-  .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.5) 50%, rgba(13,13,13,0.85) 100%); z-index: 1; }
-  .hero-inner { position: relative; z-index: 2; max-width: 800px; padding: 5rem 2rem 4rem; margin-top: -4rem; }
-  .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1.2rem; opacity: 0; }
-  .hero-tagline { font-family: 'Georgia', serif; font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: normal; color: #fff; line-height: 1.1; margin-bottom: 0.5rem; font-style: italic; opacity: 0; }
-  .hero-tagline-sub { font-family: 'Georgia', serif; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: normal; font-style: italic; opacity: 0; margin-bottom: 1.5rem; }
-  .hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; line-height: 1.9; max-width: 500px; margin-left: auto; margin-right: auto; opacity: 0; }
-  .hero-buttons { opacity: 0; }
-  .hero-ornament { margin: 2.5rem auto 0; width: 60px; height: 2px; background: linear-gradient(90deg, #FF2D8B, #2060FF); opacity: 0; }
-
-  /* ABOUT */
-  .about { background: var(--dark); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .about-image { aspect-ratio: 4/5; overflow: hidden; background: var(--card); opacity: 0; border: 1px solid var(--border); }
-  .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .about-text { opacity: 0; }
-  .about-text p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.2rem; }
-  .stats { display: flex; gap: 2.5rem; margin-top: 2rem; }
-  .stat-num { font-family: 'Georgia', serif; font-size: 2.2rem; font-weight: normal; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .stat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.2rem; }
-  .about-title { font-family: 'Georgia', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: normal; line-height: 1.2; margin-bottom: 1.5rem; }
-
-  /* SERVICES PREVIEW */
-  .services { background: var(--black); }
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-  .service-card { background: var(--card); border: 1px solid var(--border); opacity: 0; transform: translateY(30px); text-decoration: none; color: inherit; display: block; transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
-  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient); z-index: 1; }
-  .service-card:hover { border-color: rgba(255,45,139,0.4); transform: translateY(-4px); }
-  .service-card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
-  .service-card-body { padding: 1.75rem 2rem 2rem; }
-  .service-icon { font-size: 1.5rem; margin-bottom: 1.2rem; }
-  .service-card h3 { font-family: 'Georgia', serif; font-size: 1.15rem; color: #fff; font-weight: normal; margin-bottom: 0.75rem; }
-  .service-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
-  .service-card .card-arrow { margin-top: 1.5rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-
-  /* TESTIMONIALS */
-  .testimonials { background: var(--dark); }
-  .testimonial-carousel { max-width: 780px; margin: 3rem auto 0; }
-  .testimonial-slide { display: none; text-align: center; animation: fadeIn 0.5s ease; }
-  .testimonial-slide.active { display: block; }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-  .testimonial-slide blockquote { font-family: 'Georgia', serif; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.85); line-height: 1.8; font-style: italic; margin-bottom: 1.5rem; }
-  .testimonial-slide .author { font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
-  .testimonial-slide .author span { color: rgba(255,255,255,0.85); }
-  .testimonial-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
-  .testimonial-dots { display: flex; justify-content: center; gap: 0.5rem; }
-  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; transition: background 0.3s; padding: 0; }
-  .dot.active { background: #FF2D8B; }
-  .testimonial-arrow { width: 40px; height: 40px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: all 0.2s; flex-shrink: 0; }
-  .testimonial-arrow:hover { border-color: #FF2D8B; color: #FF2D8B; }
-
-  /* CONTACT PREVIEW */
-  .contact { background: var(--black); }
-  .contact-inner { max-width: 640px; margin: 0 auto; text-align: center; }
-  .contact-inner > p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2.5rem; }
-  .contact-form { text-align: left; display: flex; flex-direction: column; gap: 1rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 0.9rem 1rem; font-size: 0.9rem; background: var(--card); color: var(--text); border: 1px solid var(--border); outline: none; transition: border-color 0.2s; appearance: none; font-family: 'Arial', sans-serif; }
-  .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-muted); }
-  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: #FF2D8B; }
-  .contact-form select option { background: var(--card); }
-  .contact-form textarea { resize: vertical; min-height: 120px; }
-  .contact-form .btn-primary { width: 100%; text-align: center; font-size: 0.82rem; }
-
-  @media (max-width: 700px) {
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .form-row { grid-template-columns: 1fr; }
-    .stats { gap: 1.5rem; flex-wrap: wrap; }
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0D0D0D;--dark:#141414;--card:#1A1A1A;
+  --border:rgba(255,255,255,0.08);--text:#FFFFFF;--text-muted:rgba(255,255,255,0.6);
+  --gradient:linear-gradient(135deg,#FF2D8B 0%,#A020F0 50%,#2060FF 100%);
+  --gradient-text:linear-gradient(90deg,#FF2D8B,#A020F0,#2060FF);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Arial',sans-serif;background:#0D0D0D;color:#fff;line-height:1.7}
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(13,13,13,0.95);border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;padding:0.75rem 3rem;backdrop-filter:blur(10px)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:36px;width:auto;display:block}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);transition:color 0.2s}
+.nav-links a:hover{color:#FF2D8B}
+.nav-links .nav-cta a{background:linear-gradient(135deg,#FF2D8B 0%,#A020F0 50%,#2060FF 100%);color:#fff;padding:0.5rem 1.25rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none}
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:transparent;border:1px solid rgba(255,255,255,0.08);cursor:pointer;padding:0;flex-shrink:0}
+.hamburger span{display:block;width:20px;height:1.5px;background:#fff;transition:all 0.3s ease}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+/* MOBILE MENU */
+.mobile-menu{display:none;position:fixed;inset:0;z-index:190;background:rgba(13,13,13,0.98);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;opacity:0;transition:opacity 0.3s ease}
+.mobile-menu.open{opacity:1}
+.mobile-menu a{text-decoration:none;font-size:1.4rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);transition:color 0.2s;font-family:'Georgia',serif;font-style:italic}
+.mobile-menu a:hover{color:#FF2D8B}
+.mobile-menu .mobile-cta{display:inline-block;padding:0.9rem 2.5rem;background:linear-gradient(135deg,#FF2D8B 0%,#A020F0 50%,#2060FF 100%);color:#fff;font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;font-family:'Arial',sans-serif;font-style:normal}
+.mobile-menu .mobile-email{font-size:0.8rem;font-style:normal;font-family:'Arial',sans-serif;letter-spacing:0.05em;text-transform:none;color:rgba(255,255,255,0.6)}
+/* BUTTONS */
+.btn-primary{display:inline-block;padding:0.9rem 2.5rem;background:linear-gradient(135deg,#FF2D8B 0%,#A020F0 50%,#2060FF 100%);color:#fff;text-decoration:none;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;border:none;cursor:pointer;transition:opacity 0.2s;font-family:'Arial',sans-serif}
+.btn-primary:hover{opacity:0.85}
+.btn-outline{display:inline-block;padding:0.9rem 2.5rem;background:transparent;color:#fff;text-decoration:none;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.3);cursor:pointer;transition:all 0.2s;margin-left:1rem;font-family:'Arial',sans-serif}
+.btn-outline:hover{border-color:#FF2D8B;color:#FF2D8B}
+/* GRADIENT TEXT */
+.grad-text{background:linear-gradient(90deg,#FF2D8B,#A020F0,#2060FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* SECTIONS */
+section{padding:6rem 2rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.75rem}
+.section-title{font-family:'Georgia',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:#fff;font-weight:normal;margin-bottom:1.5rem}
+.section-title em{font-style:italic}
+.divider{width:40px;height:2px;background:linear-gradient(135deg,#FF2D8B 0%,#A020F0 50%,#2060FF 100%);margin:1.5rem 0}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.video-container{position:absolute;inset:0;z-index:0}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,13,0.7) 0%,rgba(13,13,13,0.5) 50%,rgba(13,13,13,0.85) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:800px;padding:5rem 2rem 4rem;margin-top:-2rem}
+.hero-eyebrow{font-size:0.75rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:1.2rem}
+.hero-tagline{font-family:'Georgia',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:normal;color:#fff;line-height:1.1;margin-bottom:0.5rem;font-style:italic}
+.hero-tagline-sub{font-family:'Georgia',serif;font-size:clamp(1rem,2vw,1.5rem);font-weight:normal;font-style:italic;margin-bottom:1.5rem}
+.hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.65);margin-bottom:2.5rem;line-height:1.9;max-width:500px;margin-left:auto;margin-right:auto}
+.hero-ornament{margin:2.5rem auto 0;width:60px;height:2px;background:linear-gradient(90deg,#FF2D8B,#2060FF)}
+/* ABOUT */
+.about{background:#141414}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-image{aspect-ratio:4/5;overflow:hidden;background:#1A1A1A;border:1px solid rgba(255,255,255,0.08)}
+.about-image img{width:100%;height:100%;object-fit:cover;display:block}
+.about-text p{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.9;margin-bottom:1.2rem}
+.stats{display:flex;gap:2.5rem;margin-top:2rem}
+.stat-num{font-family:'Georgia',serif;font-size:2.2rem;font-weight:normal;background:linear-gradient(90deg,#FF2D8B,#A020F0,#2060FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-top:0.2rem}
+.about-title{font-family:'Georgia',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:normal;line-height:1.2;margin-bottom:1.5rem}
+/* SERVICES */
+.services{background:#0D0D0D}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
+.service-card{background:#1A1A1A;border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;display:block;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(135deg,#FF2D8B 0%,#A020F0 50%,#2060FF 100%);z-index:1}
+.service-card:hover{border-color:rgba(255,45,139,0.4);transform:translateY(-4px)}
+.service-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.service-card-body{padding:1.75rem 2rem 2rem}
+.service-icon{font-size:1.5rem;margin-bottom:1.2rem}
+.service-card h3{font-family:'Georgia',serif;font-size:1.15rem;color:#fff;font-weight:normal;margin-bottom:0.75rem}
+.service-card p{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.8}
+.card-arrow{margin-top:1.5rem;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;background:linear-gradient(90deg,#FF2D8B,#A020F0,#2060FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* TESTIMONIALS */
+.testimonials{background:#141414}
+.testimonial-carousel{max-width:780px;margin:3rem auto 0}
+.testimonial-slide{display:none;text-align:center;animation:fadeIn 0.5s ease}
+.testimonial-slide.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.testimonial-slide blockquote{font-family:'Georgia',serif;font-size:clamp(1rem,2vw,1.25rem);color:rgba(255,255,255,0.85);line-height:1.8;font-style:italic;margin-bottom:1.5rem}
+.testimonial-slide .author{font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6)}
+.testimonial-slide .author span{color:rgba(255,255,255,0.85)}
+.testimonial-nav{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-top:2rem}
+.testimonial-dots{display:flex;justify-content:center;gap:0.5rem}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.08);border:none;cursor:pointer;transition:background 0.3s;padding:0}
+.dot.active{background:#FF2D8B}
+.testimonial-arrow{width:40px;height:40px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:rgba(255,255,255,0.6);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.2s;flex-shrink:0}
+.testimonial-arrow:hover{border-color:#FF2D8B;color:#FF2D8B}
+/* CONTACT */
+.contact{background:#0D0D0D}
+.contact-inner{max-width:640px;margin:0 auto;text-align:center}
+.contact-inner > p{font-size:0.95rem;color:rgba(255,255,255,0.6);margin-bottom:2.5rem}
+.contact-form{text-align:left;display:flex;flex-direction:column;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:0.9rem 1rem;font-size:0.9rem;background:#1A1A1A;color:#fff;border:1px solid rgba(255,255,255,0.08);outline:none;transition:border-color 0.2s;appearance:none;font-family:'Arial',sans-serif}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(255,255,255,0.6)}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:#FF2D8B}
+.contact-form select option{background:#1A1A1A}
+.contact-form textarea{resize:vertical;min-height:120px}
+/* FOOTER */
+footer{background:#141414;border-top:1px solid rgba(255,255,255,0.08);padding:2.5rem;font-size:0.8rem;color:rgba(255,255,255,0.6)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+.footer-links a{color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:#FF2D8B}
+/* COOKIE */
+.cookie-banner{position:fixed;bottom:0;left:0;width:100%;z-index:999;background:#141414;color:rgba(255,255,255,0.6);padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.08);transform:translateY(100%);transition:transform 0.4s ease}
+.cookie-banner.visible{transform:translateY(0)}
+.cookie-banner p{font-size:0.85rem;line-height:1.6;flex:1}
+.cookie-banner a{color:#FF2D8B;text-decoration:underline}
+.cookie-buttons{display:flex;gap:0.75rem;flex-shrink:0}
+.btn-accept{padding:0.6rem 1.5rem;background:linear-gradient(135deg,#FF2D8B 0%,#A020F0 50%,#2060FF 100%);color:#fff;border:none;cursor:pointer;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;font-family:'Arial',sans-serif}
+.btn-decline{padding:0.6rem 1.5rem;background:transparent;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.08);cursor:pointer;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;font-family:'Arial',sans-serif}
+.btn-decline:hover{border-color:rgba(255,255,255,0.3);color:#fff}
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:0.75rem 1.25rem}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .mobile-menu{display:flex}
+  .btn-outline{margin-left:0;margin-top:0.75rem;display:block;text-align:center}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .form-row{grid-template-columns:1fr}
+  .stats{gap:1.5rem;flex-wrap:wrap}
+  .cookie-banner{flex-direction:column}
+  .cookie-buttons{justify-content:center;width:100%}
+  .footer-inner{flex-direction:column;text-align:center}
+  .footer-links{justify-content:center}
+  section{padding:4rem 1.25rem}
+}
+@media(max-width:480px){
+  nav{padding:0.65rem 1rem}
+  .nav-logo img{height:28px}
+}
 </style>
 </head>
 <body>
 
-<!-- MOBILE MENU OVERLAY -->
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="/" onclick="closeMobile()">Home</a>
   <a href="/about" onclick="closeMobile()">About</a>
   <a href="/services" onclick="closeMobile()">Services</a>
   <a href="/blog" onclick="closeMobile()">Blog</a>
   <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
-  <a href="mailto:hello@goldcoastdjhire.com.au" class="mobile-email">hello@goldcoastdjhire.com.au</a>
+  <a href="#" class="mobile-email" id="mobileEmail">hello&#64;goldcoastdjhire.com.au</a>
 </div>
 
 <!-- NAV -->
-<nav id="main-nav" style="opacity:0;">
+<nav id="main-nav">
   <a href="/" class="nav-logo"><img src="./logo.svg" alt="Gold Coast DJ Hire" /></a>
   <ul class="nav-links">
     <li><a href="/">Home</a></li>
@@ -141,19 +189,19 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <p class="hero-eyebrow" id="hero-eyebrow">Gold Coast</p>
-    <h1 class="hero-tagline" id="hero-tagline">Bring your event to life</h1>
-    <p class="hero-tagline-sub grad-text" id="hero-tagline-sub">Corporate, Weddings & Private Events</p>
-    <p class="hero-sub" id="hero-sub">Premium DJ services crafted for the moments that matter most. Every detail, every beat, in tune with your vision.</p>
-    <div class="hero-buttons" id="hero-buttons">
+    <p class="hero-eyebrow">Gold Coast</p>
+    <h1 class="hero-tagline">Bring your event to life</h1>
+    <p class="hero-tagline-sub grad-text">Corporate, Weddings &amp; Private Events</p>
+    <p class="hero-sub">Premium DJ services crafted for the moments that matter most. Every detail, every beat, in tune with your vision.</p>
+    <div class="hero-buttons">
       <a href="/contact" class="btn-primary">Book a Consultation</a>
       <a href="/services" class="btn-outline">Our Services</a>
     </div>
-    <div class="hero-ornament" id="hero-ornament"></div>
+    <div class="hero-ornament"></div>
   </div>
 </section>
 
-<!-- ABOUT PREVIEW -->
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="section-inner">
     <div class="about-grid">
@@ -168,15 +216,15 @@
         <p>We believe great music is more than just sound — it's the invisible thread that ties an evening together, elevates the energy in the room, and creates memories that last long after the night is over.</p>
         <div class="stats">
           <div>
-            <div class="stat-num" id="stat-gigs">0</div>
+            <div class="stat-num" id="stat-gigs">100+</div>
             <div class="stat-label">Gigs Played</div>
           </div>
           <div>
-            <div class="stat-num" id="stat-varied">–</div>
+            <div class="stat-num" id="stat-varied">Varied</div>
             <div class="stat-label">Event Types</div>
           </div>
           <div>
-            <div class="stat-num" id="stat-dedicated">0</div>
+            <div class="stat-num" id="stat-dedicated">100%</div>
             <div class="stat-label">Dedicated</div>
           </div>
         </div>
@@ -188,7 +236,7 @@
   </div>
 </section>
 
-<!-- SERVICES PREVIEW -->
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-inner">
     <p class="section-label">What We Offer</p>
@@ -198,37 +246,37 @@
       <a href="/corporate" class="service-card">
         <img class="service-card-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Corporate Events" />
         <div class="service-card-body">
-          <div class="service-icon">♦</div>
+          <div class="service-icon">&#9670;</div>
           <h3>Corporate Events</h3>
           <p>Polished, professional, and perfectly pitched for product launches, galas, award nights and company celebrations.</p>
-          <div class="card-arrow">Learn more →</div>
+          <div class="card-arrow">Learn more &#8594;</div>
         </div>
       </a>
       <a href="/wedding" class="service-card">
         <img class="service-card-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Wedding Receptions" />
         <div class="service-card-body">
-          <div class="service-icon">♦</div>
+          <div class="service-icon">&#9670;</div>
           <h3>Wedding Receptions</h3>
           <p>From the first dance to the last song — a seamless musical journey that reflects your love story.</p>
-          <div class="card-arrow">Learn more →</div>
+          <div class="card-arrow">Learn more &#8594;</div>
         </div>
       </a>
       <a href="/ceremony-cocktail" class="service-card">
         <img class="service-card-img" src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&q=80" alt="Ceremony and Cocktail Hour" />
         <div class="service-card-body">
-          <div class="service-icon">♦</div>
-          <h3>Ceremony & Cocktail</h3>
+          <div class="service-icon">&#9670;</div>
+          <h3>Ceremony &amp; Cocktail</h3>
           <p>Elegant background music for ceremonies and cocktail hours — setting the perfect atmosphere.</p>
-          <div class="card-arrow">Learn more →</div>
+          <div class="card-arrow">Learn more &#8594;</div>
         </div>
       </a>
       <a href="/private" class="service-card">
         <img class="service-card-img" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80" alt="Private Events" />
         <div class="service-card-body">
-          <div class="service-icon">♦</div>
+          <div class="service-icon">&#9670;</div>
           <h3>Private Events</h3>
           <p>From intimate gatherings to exclusive celebrations — the same energy and professionalism every time.</p>
-          <div class="card-arrow">Learn more →</div>
+          <div class="card-arrow">Learn more &#8594;</div>
         </div>
       </a>
     </div>
@@ -242,28 +290,28 @@
     <h2 class="section-title" style="text-align:center;">What clients <em class="grad-text">say</em></h2>
     <div class="testimonial-carousel" id="testimonialCarousel">
       <div class="testimonial-slide active">
-        <blockquote>"The dance floor was packed from the very first song. Absolutely incredible energy all night — our guests couldn't stop talking about it for weeks."</blockquote>
-        <div class="author"><span>Sarah & James</span> — Wedding Reception, Gold Coast</div>
+        <blockquote>&#8220;The dance floor was packed from the very first song. Absolutely incredible energy all night &#8212; our guests couldn&#8217;t stop talking about it for weeks.&#8221;</blockquote>
+        <div class="author"><span>Sarah &amp; James</span> &#8212; Wedding Reception, Gold Coast</div>
       </div>
       <div class="testimonial-slide">
-        <blockquote>"Professional, punctual and incredibly talented. The music at our annual corporate gala was perfectly calibrated — sophisticated yet energetic."</blockquote>
-        <div class="author"><span>Emma R.</span> — Corporate Events Director, Gold Coast</div>
+        <blockquote>&#8220;Professional, punctual and incredibly talented. The music at our annual corporate gala was perfectly calibrated &#8212; sophisticated yet energetic.&#8221;</blockquote>
+        <div class="author"><span>Emma R.</span> &#8212; Corporate Events Director, Gold Coast</div>
       </div>
       <div class="testimonial-slide">
-        <blockquote>"From our first consultation to the final song, every detail was handled flawlessly. We wouldn't hesitate to book again for any future event."</blockquote>
-        <div class="author"><span>Tom & Claire</span> — Wedding, Broadbeach</div>
+        <blockquote>&#8220;From our first consultation to the final song, every detail was handled flawlessly. We wouldn&#8217;t hesitate to book again for any future event.&#8221;</blockquote>
+        <div class="author"><span>Tom &amp; Claire</span> &#8212; Wedding, Broadbeach</div>
       </div>
       <div class="testimonial-slide">
-        <blockquote>"Our private birthday party was an absolute hit. Read the crowd perfectly all night — knew exactly when to bring the energy up and when to pull it back."</blockquote>
-        <div class="author"><span>Marcus T.</span> — Private Event, Gold Coast</div>
+        <blockquote>&#8220;Our private birthday party was an absolute hit. Read the crowd perfectly all night &#8212; knew exactly when to bring the energy up and when to pull it back.&#8221;</blockquote>
+        <div class="author"><span>Marcus T.</span> &#8212; Private Event, Gold Coast</div>
       </div>
       <div class="testimonial-slide">
-        <blockquote>"We hired Gold Coast DJ Hire for our cocktail hour and reception. The transition between the two was seamless and the vibe was exactly what we wanted."</blockquote>
-        <div class="author"><span>Priya & Liam</span> — Wedding, Gold Coast</div>
+        <blockquote>&#8220;We hired Gold Coast DJ Hire for our cocktail hour and reception. The transition between the two was seamless and the vibe was exactly what we wanted.&#8221;</blockquote>
+        <div class="author"><span>Priya &amp; Liam</span> &#8212; Wedding, Gold Coast</div>
       </div>
       <div class="testimonial-slide">
-        <blockquote>"Highly recommend to anyone looking for a DJ who genuinely cares about your event. Went above and beyond to learn our favourite songs beforehand."</blockquote>
-        <div class="author"><span>Rachel M.</span> — 30th Birthday, Surfers Paradise</div>
+        <blockquote>&#8220;Highly recommend to anyone looking for a DJ who genuinely cares about your event. Went above and beyond to learn our favourite songs beforehand.&#8221;</blockquote>
+        <div class="author"><span>Rachel M.</span> &#8212; 30th Birthday, Surfers Paradise</div>
       </div>
     </div>
     <div class="testimonial-nav">
@@ -279,9 +327,9 @@
   <div class="section-inner">
     <div class="contact-inner">
       <p class="section-label" style="text-align:center;">Get in Touch</p>
-      <h2 class="section-title" style="text-align:center;">Let's plan <em class="grad-text">your event</em></h2>
-      <div class="divider" style="margin: 1rem auto 1.5rem;"></div>
-      <p>Tell us about your event and we'll be in touch within 24 hours.</p>
+      <h2 class="section-title" style="text-align:center;">Let&#8217;s plan <em class="grad-text">your event</em></h2>
+      <div class="divider" style="margin:1rem auto 1.5rem;"></div>
+      <p>Tell us about your event and we&#8217;ll be in touch within 24 hours.</p>
       <div class="contact-form">
         <div class="form-row">
           <input type="text" placeholder="Your Name" />
@@ -309,9 +357,9 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <p>&copy; 2026 Gold Coast DJ Hire — All rights reserved.</p>
+    <p>&#169; 2026 Gold Coast DJ Hire &#8212; All rights reserved.</p>
     <div class="footer-links">
-      <a href="mailto:hello@goldcoastdjhire.com.au">hello@goldcoastdjhire.com.au</a>
+      <a href="#" id="footerEmail">hello&#64;goldcoastdjhire.com.au</a>
       <a href="/privacy-policy">Privacy Policy</a>
       <a href="/contact">Contact</a>
     </div>
@@ -320,76 +368,54 @@
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies to analyse website traffic and improve your experience. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
+  <p>We use cookies to analyse website traffic. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
   <div class="cookie-buttons">
     <button class="btn-decline" onclick="declineCookies()">Decline</button>
     <button class="btn-accept" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
-  // Nav
-  anime({ targets: '#main-nav', opacity: [0,1], translateY: [-20,0], duration: 800, easing: 'easeOutExpo', delay: 200 });
+(function() {
+  // Build email via JS so no scanner can detect or obfuscate it
+  var u = 'hello', d = 'goldcoastdjhire.com.au';
+  var ml = 'mailto:' + u + '\x40' + d;
+  var el = document.getElementById('footerEmail');
+  var me = document.getElementById('mobileEmail');
+  if (el) { el.href = ml; }
+  if (me) { me.href = ml; }
 
-  // Hero
-  anime.timeline({ easing: 'easeOutExpo' })
-    .add({ targets: '#hero-eyebrow',    opacity: [0,1], translateY: [20,0], duration: 700 }, 400)
-    .add({ targets: '#hero-tagline',    opacity: [0,1], translateY: [30,0], duration: 800 }, 650)
-    .add({ targets: '#hero-tagline-sub',opacity: [0,1], translateY: [20,0], duration: 700 }, 850)
-    .add({ targets: '#hero-sub',        opacity: [0,1], translateY: [20,0], duration: 700 }, 1000)
-    .add({ targets: '#hero-buttons',    opacity: [0,1], translateY: [20,0], duration: 700 }, 1150)
-    .add({ targets: '#hero-ornament',   opacity: [0,1], scaleX: [0,1],     duration: 600, transformOrigin: 'left center' }, 1350);
-
-  // Scroll helper
-  function onVisible(sel, cb) {
-    const el = document.querySelector(sel);
-    if (!el) return;
-    const obs = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) { cb(); obs.disconnect(); }
-    }, { threshold: 0.2 });
-    obs.observe(el);
+  // Hamburger
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+    mobileMenu.style.display = 'none';
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
   }
-
-  // About
-  onVisible('#about-image', () => {
-    anime({ targets: '#about-image', opacity: [0,1], translateX: [-50,0], duration: 1000, easing: 'easeOutExpo' });
-    anime({ targets: '#about-text',  opacity: [0,1], translateX: [50,0],  duration: 1000, easing: 'easeOutExpo' });
-  });
-
-  // Stats
-  onVisible('.stats', () => {
-    let g = { val: 0 };
-    anime({ targets: g, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
-      update: () => { document.getElementById('stat-gigs').innerHTML = Math.round(g.val) + '+'; }
-    });
-    let d = { val: 0 };
-    anime({ targets: d, val: 100, round: 1, duration: 1800, easing: 'easeOutExpo',
-      update: () => { document.getElementById('stat-dedicated').innerHTML = Math.round(d.val) + '%'; }
-    });
-    anime({ targets: '#stat-varied', opacity: [0,1], duration: 800, easing: 'easeOutExpo',
-      begin: () => { document.getElementById('stat-varied').innerHTML = 'Varied'; }
-    });
-  });
-
-  // Service cards
-  onVisible('.services-grid', () => {
-    anime({ targets: '.service-card', opacity: [0,1], translateY: [30,0], delay: anime.stagger(120), duration: 750, easing: 'easeOutExpo' });
+  window.closeMobile = closeMobile;
+  hamburger.addEventListener('click', function() {
+    var isOpen = hamburger.classList.toggle('open');
+    if (isOpen) {
+      mobileMenu.style.display = 'flex';
+      setTimeout(function(){ mobileMenu.classList.add('open'); }, 10);
+      document.body.style.overflow = 'hidden';
+    } else { closeMobile(); }
   });
 
   // Testimonial carousel
-  const slides = document.querySelectorAll('.testimonial-slide');
-  const dotsContainer = document.getElementById('testimonialDots');
-  let current = 0;
-  let autoTimer;
-
-  slides.forEach((_, i) => {
-    const d = document.createElement('button');
+  var slides = document.querySelectorAll('.testimonial-slide');
+  var dotsContainer = document.getElementById('testimonialDots');
+  var current = 0;
+  var autoTimer;
+  slides.forEach(function(_, i) {
+    var d = document.createElement('button');
     d.className = 'dot' + (i === 0 ? ' active' : '');
-    d.onclick = () => { goTo(i); resetTimer(); };
+    d.onclick = function() { goTo(i); resetTimer(); };
     dotsContainer.appendChild(d);
   });
-
   function goTo(n) {
     slides[current].classList.remove('active');
     dotsContainer.children[current].classList.remove('active');
@@ -397,37 +423,44 @@
     slides[current].classList.add('active');
     dotsContainer.children[current].classList.add('active');
   }
-
   function resetTimer() {
     clearInterval(autoTimer);
-    autoTimer = setInterval(() => goTo(current + 1), 5000);
+    autoTimer = setInterval(function(){ goTo(current + 1); }, 5000);
   }
-
-  document.getElementById('prevBtn').onclick = () => { goTo(current - 1); resetTimer(); };
-  document.getElementById('nextBtn').onclick = () => { goTo(current + 1); resetTimer(); };
-  autoTimer = setInterval(() => goTo(current + 1), 5000);
-
-  // Hamburger menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  function closeMobile() {
-    mobileMenu.classList.remove('open');
-    mobileMenu.style.display = 'none';
-    hamburger.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  hamburger.addEventListener('click', () => {
-    const isOpen = hamburger.classList.toggle('open');
-    if (isOpen) {
-      mobileMenu.style.display = 'flex';
-      setTimeout(() => mobileMenu.classList.add('open'), 10);
-      document.body.style.overflow = 'hidden';
-    } else {
-      closeMobile();
-    }
-  });
+  document.getElementById('prevBtn').onclick = function(){ goTo(current - 1); resetTimer(); };
+  document.getElementById('nextBtn').onclick = function(){ goTo(current + 1); resetTimer(); };
+  autoTimer = setInterval(function(){ goTo(current + 1); }, 5000);
 
   // Cookie
-  window.addEventListener('load', () => {
+  window.addEventListener('load', function() {
     if (!localStorage.getItem('gc_cookie_consent')) {
-      setTimeout(() => docume
+      setTimeout(function(){ document.getElementById('cookieBanner').classList.add('visible'); }, 1500);
+    }
+  });
+  window.acceptCookies = function() { localStorage.setItem('gc_cookie_consent','accepted'); document.getElementById('cookieBanner').classList.remove('visible'); };
+  window.declineCookies = function() { localStorage.setItem('gc_cookie_consent','declined'); document.getElementById('cookieBanner').classList.remove('visible'); };
+
+  // Animate about section on scroll
+  function onVisible(sel, cb) {
+    var el = document.querySelector(sel);
+    if (!el) return;
+    var obs = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) { cb(); obs.disconnect(); }
+    }, { threshold: 0.2 });
+    obs.observe(el);
+  }
+  onVisible('#about-image', function() {
+    if (typeof anime !== 'undefined') {
+      anime({ targets: '#about-image', opacity: [0,1], translateX: [-50,0], duration: 1000, easing: 'easeOutExpo' });
+      anime({ targets: '#about-text',  opacity: [0,1], translateX: [50,0],  duration: 1000, easing: 'easeOutExpo' });
+    }
+  });
+  onVisible('.services-grid', function() {
+    if (typeof anime !== 'undefined') {
+      anime({ targets: '.service-card', opacity: [0,1], translateY: [30,0], delay: anime.stagger(120), duration: 750, easing: 'easeOutExpo' });
+    }
+  });
+})();
+</script>
+</body>
+</html>
