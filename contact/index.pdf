@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact — Gold Coast DJ Hire</title>
+<meta name="description" content="Book Gold Coast DJ Hire for your wedding, corporate event or private party. Get in touch for a free consultation." />
+<link rel="canonical" href="https://www.goldcoastdjhire.com.au/contact.html" />
+<link rel="stylesheet" href="../style.css" />
+<style>
+  .page-hero { padding: 10rem 2rem 5rem; background: var(--dark); text-align: center; border-bottom: 1px solid var(--border); }
+  .page-hero h1 { font-family: 'Georgia', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: normal; font-style: italic; }
+  .contact-section { background: var(--black); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
+  .contact-info h2 { font-family: 'Georgia', serif; font-size: 1.5rem; font-weight: normal; margin-bottom: 1rem; }
+  .contact-info p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 2rem; }
+  .contact-detail { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; font-size: 0.9rem; color: var(--text-muted); }
+  .contact-detail a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  .contact-detail a:hover { color: #FF2D8B; }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 0.9rem 1rem; font-size: 0.9rem; background: var(--card); color: var(--text); border: 1px solid var(--border); outline: none; transition: border-color 0.2s; appearance: none; font-family: 'Arial', sans-serif; }
+  .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-muted); }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: #FF2D8B; }
+  .contact-form select option { background: var(--card); }
+  .contact-form textarea { resize: vertical; min-height: 140px; }
+  @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } .form-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/" onclick="closeMobile()">Home</a>
+  <a href="/about" onclick="closeMobile()">About</a>
+  <a href="/services" onclick="closeMobile()">Services</a>
+  <a href="/blog" onclick="closeMobile()">Blog</a>
+  <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
+  <a href="mailto:hello@goldcoastdjhire.com.au" class="mobile-email">hello@goldcoastdjhire.com.au</a>
+</div>
+<nav>
+  <a href="/" class="nav-logo"><img src="../logo.svg" alt="Gold Coast DJ Hire" /></a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="nav-cta"><a href="/contact">Book Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <p class="section-label">Get in Touch</p>
+  <h1>Let's plan <em class="grad-text">your event</em></h1>
+</div>
+
+<section class="contact-section">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="section-label">Contact</p>
+        <h2>We'd love to hear <em class="grad-text">from you</em></h2>
+        <div class="divider"></div>
+        <p>Tell us about your event and we'll get back to you within 24 hours with a tailored quote and consultation time that suits you.</p>
+        <div class="contact-detail">
+          <span>✉</span>
+          <a href="/cdn-cgi/l/email-protection#a0c8c5cccccfe0c7cfccc4c3cfc1d3d4c4cac8c9d2c58ec3cfcd8ec1d5"><span class="__cf_email__" data-cfemail="29414c454546694e46454d4a46485a5d4d4341405b4c074a464407485c">[email&#160;protected]</span></a>
+        </div>
+        <div class="contact-detail">
+          <span>📍</span>
+          <span>Gold Coast, QLD</span>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Email Address" />
+          </div>
+          <div class="form-row">
+            <input type="tel" placeholder="Phone Number" />
+            <select>
+              <option value="" disabled selected>Event Type</option>
+              <option>Wedding</option>
+              <option>Corporate Event</option>
+              <option>Ceremony / Cocktail Hour</option>
+              <option>Private Event</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <input type="text" placeholder="Event Date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
+            <input type="text" placeholder="Approximate Guest Count" />
+          </div>
+          <input type="text" placeholder="Venue Name / Location" />
+          <textarea placeholder="Tell us about your event — the vibe you're after, any special requests, and anything else we should know..."></textarea>
+          <button class="btn-primary" type="button">Send Enquiry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 Gold Coast DJ Hire — All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:hello@goldcoastdjhire.com.au">hello@goldcoastdjhire.com.au</a>
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+</footer>
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to analyse website traffic. See our <a href="mailto:hello@goldcoastdjhire.com.au">hello@goldcoastdjhire.com.au</a>
+      <a href="/privacy-policy">Privacy Policy</a>.</p>
+  <div class="cookie-buttons">
+    <button class="btn-decline" onclick="declineCookies()">Decline</button>
+    <button class="btn-accept" onclick="acceptCookies()">Accept</button>
+  </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  window.addEventListener('load', () => { if (!localStorage.getItem('gc_cookie_consent')) setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1500); });
+  function acceptCookies() { localStorage.setItem('gc_cookie_consent','acc
