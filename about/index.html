@@ -125,35 +125,17 @@
   </div>
 </footer>
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies to analyse website traffic. See our <a href="mailto:hello@goldcoastdjhire.com.au">hello@goldcoastdjhire.com.au</a>
-      <a href="/privacy-policy">Privacy Policy</a>.</p>
+  <p>We use cookies to analyse website traffic. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
   <div class="cookie-buttons">
     <button class="btn-decline" onclick="declineCookies()">Decline</button>
     <button class="btn-accept" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   window.addEventListener('load', () => { if (!localStorage.getItem('gc_cookie_consent')) setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1500); });
   function acceptCookies() { localStorage.setItem('gc_cookie_consent','accepted'); document.getElementById('cookieBanner').classList.remove('visible'); }
   function declineCookies() { localStorage.setItem('gc_cookie_consent','declined'); document.getElementById('cookieBanner').classList.remove('visible'); }
 </script>
 <script>
   const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  function closeMobile() {
-    mobileMenu.classList.remove('open');
-    mobileMenu.style.display = 'none';
-    hamburger.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  hamburger.addEventListener('click', () => {
-    const isOpen = hamburger.classList.toggle('open');
-    if (isOpen) {
-      mobileMenu.style.display = 'flex';
-      setTimeout(() => mobileMenu.classList.add('open'), 10);
-      document.body.style.overflow = 'hidden';
-    } else { closeMobile(); }
-  });
-</script>
-</body>
-</html>
+  const mobile
