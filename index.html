@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gold Coast DJ Hire — Corporate, Weddings & Private Events</title>
-<meta name="description" content="Gold Coast DJ Hire — premium DJ services for weddings, corporate events and private parties on the Gold Coast and Brisbane." />
+<meta name="description" content="Gold Coast DJ Hire — premium DJ services for weddings, corporate events and private parties on the Gold Coast." />
 <meta name="keywords" content="DJ hire Gold Coast, Gold Coast DJ, wedding DJ Gold Coast, corporate DJ Gold Coast, DJ services Gold Coast" />
 <link rel="canonical" href="https://www.goldcoastdjhire.com.au" />
 <meta property="og:title" content="Gold Coast DJ Hire — Corporate, Weddings & Private Events" />
@@ -25,7 +25,7 @@
     "addressCountry": "AU",
     "addressLocality": "Gold Coast"
   },
-  "areaServed": ["Gold Coast", "Brisbane", "Queensland"],
+  "areaServed": ["Gold Coast", "Queensland"],
   "serviceType": ["Wedding DJ", "Corporate DJ", "Private Event DJ", "Cocktail Hour DJ"]
 }
 </script>
@@ -78,6 +78,9 @@
   .testimonial-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 10rem; }
   .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; transition: background 0.3s; padding: 0; }
   .dot.active { background: #FF2D8B; }
+  .testimonial-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 10.5rem; }
+  .testimonial-arrow { width: 44px; height: 44px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: all 0.2s; flex-shrink: 0; }
+  .testimonial-arrow:hover { border-color: #FF2D8B; color: #FF2D8B; }
 
   /* CONTACT PREVIEW */
   .contact { background: var(--black); }
@@ -122,7 +125,7 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <p class="hero-eyebrow" id="hero-eyebrow">Gold Coast & Brisbane</p>
+    <p class="hero-eyebrow" id="hero-eyebrow">Gold Coast</p>
     <h1 class="hero-tagline" id="hero-tagline">Bring your event to life</h1>
     <p class="hero-tagline-sub grad-text" id="hero-tagline-sub">Corporate, Weddings & Private Events</p>
     <p class="hero-sub" id="hero-sub">Premium DJ services crafted for the moments that matter most. Every detail, every beat, in tune with your vision.</p>
@@ -176,25 +179,25 @@
     <h2 class="section-title">Services tailored <em class="grad-text">for you</em></h2>
     <div class="divider"></div>
     <div class="services-grid">
-      <a href="./services/corporate.html" class="service-card">
+      <a href="./corporate.html" class="service-card">
         <div class="service-icon">♦</div>
         <h3>Corporate Events</h3>
         <p>Polished, professional, and perfectly pitched for product launches, galas, award nights and company celebrations.</p>
         <div class="card-arrow">Learn more →</div>
       </a>
-      <a href="./services/wedding.html" class="service-card">
+      <a href="./wedding.html" class="service-card">
         <div class="service-icon">♦</div>
         <h3>Wedding Receptions</h3>
         <p>From the first dance to the last song — a seamless musical journey that reflects your love story.</p>
         <div class="card-arrow">Learn more →</div>
       </a>
-      <a href="./services/ceremony-cocktail.html" class="service-card">
+      <a href="./ceremony-cocktail.html" class="service-card">
         <div class="service-icon">♦</div>
         <h3>Ceremony & Cocktail</h3>
         <p>Elegant background music for ceremonies and cocktail hours — setting the perfect atmosphere.</p>
         <div class="card-arrow">Learn more →</div>
       </a>
-      <a href="./services/private.html" class="service-card">
+      <a href="./private.html" class="service-card">
         <div class="service-icon">♦</div>
         <h3>Private Events</h3>
         <p>From intimate gatherings to exclusive celebrations — the same energy and professionalism every time.</p>
@@ -216,7 +219,7 @@
       </div>
       <div class="testimonial-slide">
         <blockquote>"Professional, punctual and incredibly talented. The music at our annual corporate gala was perfectly calibrated — sophisticated yet energetic."</blockquote>
-        <div class="author"><span>Emma R.</span> — Corporate Events Director, Brisbane</div>
+        <div class="author"><span>Emma R.</span> — Corporate Events Director, Gold Coast</div>
       </div>
       <div class="testimonial-slide">
         <blockquote>"From our first consultation to the final song, every detail was handled flawlessly. We wouldn't hesitate to book again for any future event."</blockquote>
@@ -228,14 +231,18 @@
       </div>
       <div class="testimonial-slide">
         <blockquote>"We hired Gold Coast DJ Hire for our cocktail hour and reception. The transition between the two was seamless and the vibe was exactly what we wanted."</blockquote>
-        <div class="author"><span>Priya & Liam</span> — Wedding, Brisbane</div>
+        <div class="author"><span>Priya & Liam</span> — Wedding, Gold Coast</div>
       </div>
       <div class="testimonial-slide">
         <blockquote>"Highly recommend to anyone looking for a DJ who genuinely cares about your event. Went above and beyond to learn our favourite songs beforehand."</blockquote>
         <div class="author"><span>Rachel M.</span> — 30th Birthday, Surfers Paradise</div>
       </div>
     </div>
-    <div class="testimonial-dots" id="testimonialDots"></div>
+    <div class="testimonial-nav">
+      <button class="testimonial-arrow" id="prevBtn">&#8592;</button>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+      <button class="testimonial-arrow" id="nextBtn">&#8594;</button>
+    </div>
   </div>
 </section>
 
@@ -345,20 +352,31 @@
   const slides = document.querySelectorAll('.testimonial-slide');
   const dotsContainer = document.getElementById('testimonialDots');
   let current = 0;
+  let autoTimer;
+
   slides.forEach((_, i) => {
     const d = document.createElement('button');
     d.className = 'dot' + (i === 0 ? ' active' : '');
-    d.onclick = () => goTo(i);
+    d.onclick = () => { goTo(i); resetTimer(); };
     dotsContainer.appendChild(d);
   });
+
   function goTo(n) {
     slides[current].classList.remove('active');
     dotsContainer.children[current].classList.remove('active');
-    current = n;
+    current = (n + slides.length) % slides.length;
     slides[current].classList.add('active');
     dotsContainer.children[current].classList.add('active');
   }
-  setInterval(() => goTo((current + 1) % slides.length), 5000);
+
+  function resetTimer() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  document.getElementById('prevBtn').onclick = () => { goTo(current - 1); resetTimer(); };
+  document.getElementById('nextBtn').onclick = () => { goTo(current + 1); resetTimer(); };
+  autoTimer = setInterval(() => goTo(current + 1), 5000);
 
   // Cookie
   window.addEventListener('load', () => {
