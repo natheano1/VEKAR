@@ -30,12 +30,7 @@
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTVRRJVSGC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BTVRRJVSGC');
-</script>
+
 </head>
 <body>
 <!-- MOBILE MENU -->
@@ -45,7 +40,7 @@
   <a href="/services" onclick="closeMobile()">Services</a>
   <a href="/blog" onclick="closeMobile()">Blog</a>
   <a href="/contact" class="mobile-cta" onclick="closeMobile()">Book Now</a>
-  <a href="#" id="footerEmail">hello&#64;goldcoastdjhire.com.au</a>
+  <a href="#" id="mobileEmail">hello&#64;goldcoastdjhire.com.au</a>
 </div>
 
 <nav>
@@ -140,44 +135,59 @@
     <button class="btn-accept" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
 (function() {
+  // Email links
   var u = 'hello', d = 'goldcoastdjhire.com.au';
   var ml = 'mailto:' + u + '\x40' + d;
   ['footerEmail','mobileEmail','ppEmail1','ppEmail2'].forEach(function(id) {
     var el = document.getElementById(id);
     if (el) el.href = ml;
   });
+
+  // Hamburger menu
   var hamburger = document.getElementById('hamburger');
   var mobileMenu = document.getElementById('mobileMenu');
-  if (!hamburger || !mobileMenu) return;
-  function closeMobile() {
-    mobileMenu.classList.remove('open');
-    mobileMenu.style.display = 'none';
-    hamburger.classList.remove('open');
-    document.body.style.overflow = '';
+  if (hamburger && mobileMenu) {
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+      mobileMenu.style.display = 'none';
+      hamburger.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    window.closeMobile = closeMobile;
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = hamburger.classList.toggle('open');
+      if (isOpen) {
+        mobileMenu.style.display = 'flex';
+        setTimeout(function(){ mobileMenu.classList.add('open'); }, 10);
+        document.body.style.overflow = 'hidden';
+      } else { closeMobile(); }
+    });
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) closeMobile();
+    });
   }
-  window.closeMobile = closeMobile;
-  hamburger.addEventListener('click', function(e) {
-    e.stopPropagation();
-    var isOpen = hamburger.classList.toggle('open');
-    if (isOpen) {
-      mobileMenu.style.display = 'flex';
-      setTimeout(function(){ mobileMenu.classList.add('open'); }, 10);
-      document.body.style.overflow = 'hidden';
-    } else { closeMobile(); }
-  });
-  mobileMenu.addEventListener('click', function(e) {
-    if (e.target === mobileMenu) closeMobile();
-  });
+
+  // Cookie banner
   window.addEventListener('load', function() {
     var banner = document.getElementById('cookieBanner');
     if (banner && !localStorage.getItem('gc_cookie_consent')) {
       setTimeout(function(){ banner.classList.add('visible'); }, 1500);
     }
   });
-  window.acceptCookies = function() { localStorage.setItem('gc_cookie_consent','accepted'); var b = document.getElementById('cookieBanner'); if (b) b.classList.remove('visible'); };
-  window.declineCookies = function() { localStorage.setItem('gc_cookie_consent','declined'); var b = document.getElementById('cookieBanner'); if (b) b.classList.remove('visible'); };
+  window.acceptCookies = function() {
+    localStorage.setItem('gc_cookie_consent','accepted');
+    var b = document.getElementById('cookieBanner');
+    if (b) b.classList.remove('visible');
+  };
+  window.declineCookies = function() {
+    localStorage.setItem('gc_cookie_consent','declined');
+    var b = document.getElementById('cookieBanner');
+    if (b) b.classList.remove('visible');
+  };
 })();
 </script>
 </body>

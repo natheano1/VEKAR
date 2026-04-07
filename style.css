@@ -141,7 +141,12 @@ footer { background: var(--dark); border-top: 1px solid var(--border); padding: 
 
 /* MOBILE TOUCH FIXES */
 .mobile-menu { touch-action: manipulation; }
-.mobile-menu a { padding: 0.5rem 1rem; min-height: 44px; display: flex; align-items: center; justify-content: center; -webkit-tap-highlight-color: transparent; }
-.hamburger { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
-.service-card { -webkit-tap-highlight-color: transparent; }
-a, button { -webkit-tap-highlight-color: transparent; }
+.mobile-menu a { padding: 0.75rem 1rem; min-height: 44px; display: flex; align-items: center; justify-content: center; -webkit-tap-highlight-color: transparent; cursor: pointer; }
+.hamburger { -webkit-tap-highlight-color: transparent; touch-action: manipulation; cursor: pointer; }
+.service-card { -webkit-tap-highlight-color: transparent; cursor: pointer; }
+a, button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
+.btn-primary, .btn-outline { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; touch-action: manipulation; }
+.timeline-item { cursor: default; }
+/* Ensure nothing overlaps clickable elements */
+.cookie-banner { pointer-events: auto; }
+nav { pointer-events: auto; }
